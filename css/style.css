@@ -234,6 +234,45 @@ body {
 } */
 
 
+/* START VIEWERS */
+.viewers  {
+   
+    display: flex; 
+    align-items: center; 
+    color: #fff; 
+    background-color: #333; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+    
+}
+
+
+.viewers i {
+  font-size: 20px;
+  color:#fff;
+ /* bottom: 2px 2px; */
+ opacity: 0.5;
+ border: #7e2594 1px solid;
+ padding: 1px 1px;
+ border-radius: 10px;
+ box-shadow: 2px 2px white ;
+}
+
+.viewers p {
+  color:black;
+  font-size: 10px;
+  margin-top: 1px;
+  position:relative;
+  padding: 1px 1px;
+  border:#b0e510 1px solid;
+  border-radius: 10px;
+  background: whitesmoke;
+  opacity: 0.4;
+  left: 4px;
+}
+
+/* END VIEWERS */
+
 
 .navbar  {
   position: relative;
