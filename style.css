@@ -34,6 +34,7 @@
 html {
      font-size: 62.5%;
      overflow-x: hidden;
+     /* border: red 1px solid; */
 }
 
 body {
@@ -47,6 +48,7 @@ body {
     background-position: center center;
     height: 100%;
     background-attachment: fixed; 
+    /* border: red 1px solid; */
 }
 
   /*h1 ,h3*, h2 */
@@ -81,6 +83,10 @@ body {
 .logo {
     /* border: red solid 1px; */
     position: relative;
+    padding: 5px 5px;
+    left: 7px;
+    border-radius: 10px;
+
   }
 
   .logo img {
@@ -152,6 +158,7 @@ body {
 
   }
 
+  
 
   .email-chat-container h4 {
     color: #00ff99;
@@ -234,7 +241,6 @@ body {
 } */
 
 
-
 /* START VIEWERS */
 .viewers  {
    
@@ -275,17 +281,18 @@ body {
 /* END VIEWERS */
 
 
-
 .navbar  {
   position: relative;
-  right: 3em;
+  right: 1em;
   overflow: hidden;
    /* limit number of words 👍👍👉*/
    display: -webkit-box;
    -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
    -webkit-box-orient: vertical;
    text-overflow: ellipsis;
-   /* overflow:hidden; */
+   overflow:hidden;
+   width: 50%;
+   /* border: red 1px solid; */
 }
 
 
@@ -320,7 +327,6 @@ section {
     flex-flow: row-reverse;
     overflow: hidden;
     
-    
 
 }
 
@@ -329,11 +335,12 @@ section {
 /*my home section pic*/
 .home {
     display: flex;
+    /* border: red 1px solid; */
     
     /*align-items: center;*/
     padding:  0px 0px 0px 0px;
     /*padding: 0 10%;*/
-    height: 84.5vh;
+    height: 100%vh;
     
     
     
@@ -348,11 +355,12 @@ section {
     overflow: hidden;
     /*height: 100%;*/
     background-attachment:fixed; 
-    background-size: 57.5rem;
+    background-size: 100%;
     border-radius: 8px;
     border-top-left-radius: 8px;
-    width: 58%;
+    width: 50.5%;
     animation: floatImage 4s ease-in-out infinite;
+    overflow: hidden;
    
 }
 
@@ -361,12 +369,13 @@ section {
   position: absolute;
   top: 0;
   bottom: 10px;
-  right: 14.3em;
-  width: 38%;
-  height: 98.5%;
+  right: 18em;
+  width: 41%;
+  height: 99%;
   background: transparent;
   /*border: 2px solid red;*/
   transition: 3s;
+  overflow: hidden;
 }
 
 
@@ -398,28 +407,44 @@ section {
   font-weight: 800;
   font-size: 2vw;
    overflow:hidden;
-   
+   /* border: red 1px solid; */
+   padding: 10px 20px;
+   left: 10px;
+   margin-bottom: 5px;
+   margin: 10px 10px; /* Margin top and bottom */ 
 }
 
 
 
 .home-content {
-    max-width: 60rem;
+  width: 49%;
+    /* max-width: 60rem; */
     z-index: 99;
-   
+    /* border: red 1px solid; */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 0.5%;
 }
 
 
 .home-content h1 {
   position: relative;
   display: inline-block;
-   font-size: 5.6rem;
+   font-size: 6.6rem;
    font-weight: 600;
+   font-family: 'poppins',sans-serif;
    line-height:  1.3;
+   font-size: 'poppins',sans-serif;
    opacity: 3px;
    text-shadow: -9px -2px grey;
    animation: shake 0.5s infinite;
    /* border: red solid 1px; */
+   left: 20px;
+   padding:3px 20px;
+   overflow: hidden;
+   width: fit-content;
+   margin-bottom: 10px;
+   margin-top: 40px;
 }
 
 
@@ -440,25 +465,38 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 38.8rem;
-
+    width: 43rem;
+    left: 20px;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    background:#fff ;
+    border-radius: 10px;
+    font-family: 'poppins',sans-serif;
+    opacity: 0.7;
+    
 }
+
+
 
 .home-content .text-animate h3 {
   /* border: red solid 1px; */
      font-size: 4.2rem;
      font-weight: 700;
      color: /*goldenrod*/transparent;
-     -webkit-text-stroke: .7px var(--main-color);
+     -webkit-text-stroke: .7px green;
      /*opacity: 3px;*/
-     background-image: linear-gradient(var(--main-color), var(--main-color));
+     background-image: linear-gradient(var(--main-color), greenyellow);
      background-repeat: no-repeat;
      -webkit-background-clip: text;
      background-position: -33rem 0;
      animation: homeBGText 6s linear infinite;
      animation-delay:  2s;
      /* transform: skewX(40deg); */
-    
+     overflow: hidden;
+    position: relative;
+    width: 43rem;
+    padding: 5px 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -481,23 +519,38 @@ section {
 
 .home-content p {
     font-size: 1.6rem;
-    margin: 1rem 0 rem;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 1rem 0rem; */
+    font-weight: bolder;
+    font-family: 'poppins', sans-serif;
      /* limit number of words 👍👍👉*/
    display: -webkit-box;
    -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
    -webkit-box-orient: vertical;
    text-overflow: ellipsis;
-   /* overflow:hidden; */
+   overflow:hidden;
+   /* border: red 1px solid; */
+   padding: 5px 20px;
+   /* left: 20px; */
+   /* /* margin-bottom: 5px; */
+   top: 5px; 
+   width: 90%;
+   margin-left:19px;
+   bottom:5px;
 }
 
 .btn-box {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 55.5rem;
+    align-items: center;
+    width: 60rem;
     height: 5rem;
+    gap: 10px;
+    /* border: red 1px solid; */
+   padding: 10px 20px;
+   left: 10px;
+   bottom: 5px;
+   margin: 10px 10px; /* Margin top and bottom */
 }
 
 .btn-box .btn {
@@ -516,6 +569,7 @@ section {
     border-radius: .8rem;
     font-size: 25px;
     font-weight: 600;
+    font-family: 'poppins',sans-serif;
     letter-spacing: .1rem;
     color: var(--bg-color) green;
     z-index: 1;
@@ -586,9 +640,9 @@ section {
  cursor: pointer;  /* Indicate clickable element */
  /* transition: all 0.3s ease-in-out;  Add smooth hover effect */
  width: 19rem;
- height: 4.5rem;
+ height: 4rem;
  position:relative;
-
+ font-family: 'poppins',sans-serif;
 }
 
 .buton:hover {  /* Styles applied on button hover */
@@ -613,9 +667,9 @@ section {
 
 .home-sci {
     position: absolute;
-    left: 16rem;
+    left:19rem;
     /* bottom: 4rem; */
-    width: 270px; 
+    width: fit-content; 
     overflow: hidden;
     /* cursor: pointer; */
     display: flex; /* Arrange icons horizontally */
@@ -623,9 +677,58 @@ section {
     align-items: center; /* Align icons vertically in the center */
   /* Optional: Add some margin or padding */
     margin: 10px 10px; /* Margin top and bottom */
-    padding: 7px 5px; /* Padding around the icons */
+    padding: 10px 20px; /* Padding around the icons */
     /* border: 1px red solid; */
+  
 }
+
+.home-sci p {
+  color: blue;
+  background-color: #fff;
+  opacity: .5;
+  gap: 10px;
+  /* border: red 1px solid; */
+  border-radius: 10px;
+  font-size: 40px;
+  font-family: cursive;
+  /* padding: 5px 10px; */
+  margin-right: 15px;
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 4px grey;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.home-sci .bx {
+  color: rgb(188, 167, 4); 
+  background: transparent; 
+  border-radius: 50%;
+  font-size: 50px;
+  padding: 5px 10px;
+  position: relative;
+  overflow: hidden;
+  /* border: 2px solid greenyellow; Add greenyellow stroke */
+  animation: lightningAnim 1.5s ease-in-out infinite;
+}
+
+@keyframes lightningAnim {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px goldenrod; 
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px black; 
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px brown; 
+  }
+}
+
 
 
 .home-sci a {
@@ -635,6 +738,7 @@ section {
   margin: 0 5px; /* Margin left and right */
  /* cursor: pointer;  Add cursor pointer effect */
 }
+
 
 .home-sci a i {
   font-size: 30px; /* Adjust font size as desired */
@@ -672,31 +776,6 @@ section {
     height: 100%;
 }
 
-
-.Submit-btn {
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  /* font-family: "poppins",sans-serif; */
-  font-size: 2em;
-  font-weight: 900;
-  color: #fff;
-  width: 10em;
-  height: 3em;
-  border: groove;
-  letter-spacing: 1rem;
-  cursor: pointer;
-  font-family: cursive;
-}
-
-.Submit-btn:hover  {
-    color: goldenrod;
-    opacity: .8;
-}
-
-/* .btn-box  button {
-  transition: transform 0.2s ease-in-out;
-} */
 
 
  
@@ -1031,7 +1110,7 @@ button{
   white-space: 6px;
   margin-right: 5px;
   overflow: hidden;
-  border: red solid 2px;
+  /* border: red solid 2px; */
  
 }
 
@@ -1071,7 +1150,8 @@ button{
 
  .heading {
     font-size: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     text-align: center;
 
  }
@@ -1849,6 +1929,57 @@ word-break: break-all;
 
 
 
+/* submit btn */
+
+
+.btn-box {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  margin-top: 20px; /* Add some space above the button */
+}
+
+.Submit-btn {
+ 
+  background-color: #000;
+  /* border: red 1px solid; */
+  /* font-family: "poppins",sans-serif; */
+  font-size: 2em;
+  font-weight: 900;
+  color: #fff;
+  width: 10em;
+  height: 3em;
+  border: groove;
+  letter-spacing: 1rem;
+  cursor: pointer;
+  font-family: cursive;
+
+}
+
+.Submit-btn:hover  {
+    color: goldenrod;
+    opacity: .8;
+}
+
+
+
+.Submit-btn:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+}
+
+.Submit-btn:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 0 3px rgba(72, 207, 173, 0.5); /* Add a focus ring */
+}
+
+/* .btn-box  button {
+  transition: transform 0.2s ease-in-out;
+} */
+
+
+
+
+/* footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -2142,10 +2273,11 @@ word-break: break-all;
 @media (max-width: 768px) { 
   /* Tablet and below */
   .navigation { 
-    display: none; /* Hide main navigation */
+    display: none; /*Hide main navigation*/
   }
   .mobile-menu { 
     display: block; /* Show mobile menu */
+    cursor: pointer;
   }
 }
 
@@ -2220,7 +2352,37 @@ word-break: break-all;
 }
 /* //////// */
 
+/*START OF sean @media */
+/* @media (:width)  {function}; */
 
+.container  {
+  width:100%;
+  margin-left:auto;
+   margin-right:auto;
+   padding left:0.5rem;
+   padding left:0.5rem;
+/*margin: 0 auto;*/
+}
+
+/*xs*/
+@media  (min-width:475px) {}
+
+/*sm*/
+@media  (min-width:640px) {}
+
+/*ms*/
+@media  (min-width:768px) {}
+
+/*ls*/
+@media  (min-width:1024px) {}
+
+/*xl*/
+@media  (min-width:1280px) {}
+
+/*2xl*/
+@media  (min-width:1536px) {}
+
+/*END OF sean @media */
 
 /*KEYFRAMES   ANIMATION*/
 @keyframes homeBGText  {
