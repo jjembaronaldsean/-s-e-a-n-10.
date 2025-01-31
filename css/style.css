@@ -687,6 +687,7 @@ section {
 }
 
 .home-sci p {
+    left: 18em;
   color: blue;
   background-color: #fff;
   opacity: .5;
@@ -707,7 +708,6 @@ section {
 
 
 .home-sci .bx {
-  left: 18em;
   color: rgb(188, 167, 4); 
   background: transparent; 
   border-radius: 50%;
