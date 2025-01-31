@@ -346,14 +346,14 @@ section {
     
     
        background: url('/images/about.erase.zoom.jpg') no-repeat center;
-       right: 0;
+       right: 18em;
       
       background-size: cover;
       
       background-position-x: right;
       
     overflow: hidden;
-    /*height: 100%;*/
+/*     height: 100%; */
     background-attachment:fixed; 
     background-size: 100%;
     border-radius: 8px;
@@ -714,6 +714,7 @@ section {
 
 
 .home-sci p {
+    left: 18em;
   color: blue;
   background-color: #fff;
   opacity: .5;
