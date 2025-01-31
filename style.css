@@ -335,7 +335,7 @@ section {
 /*my home section pic*/
 .home {
     display: flex;
-    /* border: red 1px solid; */
+    border: red 1px solid;
     
     /*align-items: center;*/
     padding:  0px 0px 0px 0px;
@@ -420,7 +420,7 @@ section {
   width: 49%;
     /* max-width: 60rem; */
     z-index: 99;
-    /* border: red 1px solid; */
+    border: red 1px solid;
     border-radius: 10px;
     overflow: hidden;
     margin-right: 0.5%;
