@@ -373,7 +373,7 @@ section {
   width: 41%;
   height: 99%;
   background: transparent;
-  /*border: 2px solid red;*/
+  border: 2px solid red;
   transition: 3s;
   overflow: hidden;
 }
