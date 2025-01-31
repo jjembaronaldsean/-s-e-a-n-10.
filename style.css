@@ -336,7 +336,7 @@ section {
 .home {
     display: flex;
     border: red 1px solid;
-    overflow:hidden;
+    
     /*align-items: center;*/
     padding:  0px 0px 0px 0px;
     /*padding: 0 10%;*/
@@ -353,7 +353,7 @@ section {
       background-position-x: right;
       
     overflow: hidden;
-/*     height: 100%; */
+    /*height: 100%;*/
     background-attachment:fixed; 
     background-size: 100%;
     border-radius: 8px;
@@ -365,11 +365,12 @@ section {
 }
 
 
+
 .home-imgHover  {
   position: absolute;
   top: 0;
   bottom: 10px;
-  right: 15em;
+  right: 18em;
   width: 41%;
   height: 99%;
   background: transparent;
@@ -421,36 +422,6 @@ section {
     /* max-width: 60rem; */
     z-index: 99;
     border: red 1px solid;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-right: 0.5%;
-}
-
-
-.multi {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  color: greenyellow;
-  /* border: 2px solid red; */
-  font-family: cursive;
-  font-weight: 800;
-  font-size: 2vw;
-   overflow:hidden;
-   /* border: red 1px solid; */
-   padding: 10px 20px;
-   left: 10px;
-   margin-bottom: 5px;
-   margin: 10px 10px; /* Margin top and bottom */ 
-}
-
-
-
-.home-content {
-  width: 49%;
-    /* max-width: 60rem; */
-    z-index: 99;
-    /* border: red 1px solid; */
     border-radius: 10px;
     overflow: hidden;
     margin-right: 0.5%;
@@ -712,16 +683,14 @@ section {
   
 }
 
-
 .home-sci p {
-    left: 18em;
   color: blue;
   background-color: #fff;
   opacity: .5;
   gap: 10px;
   /* border: red 1px solid; */
   border-radius: 10px;
-  font-size: 40px;
+  font-size: 30px;
   font-family: cursive;
   /* padding: 5px 10px; */
   margin-right: 15px;
@@ -736,7 +705,7 @@ section {
 
 .home-sci .bx {
   color: rgb(188, 167, 4); 
-  background: transparent; 
+  /* background: transparent;  */
   border-radius: 50%;
   font-size: 50px;
   padding: 5px 10px;
@@ -760,8 +729,6 @@ section {
     box-shadow: 0 0 10px brown; 
   }
 }
-
-
 
 
 
@@ -1184,7 +1151,7 @@ button{
 
  .heading {
     font-size: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
     text-align: center;
 
