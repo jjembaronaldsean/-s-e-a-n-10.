@@ -369,7 +369,7 @@ section {
   position: absolute;
   top: 0;
   bottom: 10px;
-  right: 18em;
+  right: 16em;
   width: 41%;
   height: 99%;
   background: transparent;
@@ -708,7 +708,7 @@ section {
   /* Optional: Add some margin or padding */
     margin: 10px 10px; /* Margin top and bottom */
     padding: 10px 20px; /* Padding around the icons */
-    /* border: 1px red solid; */
+    border: 1px red solid;
   
 }
 
