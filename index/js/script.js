@@ -93,6 +93,43 @@ button.addEventListener("click", onClick);
 
 
 
+//  START OF viewers
+ // Initialize viewerCount 
+// Server (Node.js with Express)
+const express = require('express');
+const app = express();
+const db = require('./db'); // Your database connection
+
+app.get('/update_views', (req, res) => {
+  db.query('UPDATE views SET count = count + 1', (err, result) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error updating count');
+    } else {
+      db.query('SELECT count FROM views', (err, result) => { // Get the updated count
+        if (err) {
+          console.error(err);
+          res.status(500).send('Error getting count');
+        } else {
+          res.json({ count: result[0].count }); // Send back the count as JSON
+        }
+      });
+    }
+  });
+});
+
+// Client-side JavaScript
+fetch('/update_views')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("viewer-count").textContent = data.count;
+  });
+
+ // You can remove this if you don't need real-time updates
+ // setInterval(updateViewerCount, 1000); // Update every second 
+
+// END OF VIEWERS
+
 
 
 
@@ -226,3 +263,41 @@ const typed = new Typed ('.multi', {
 });
 
 // end of multi text
+
+
+
+
+
+
+
+
+/*function add(a, b) {
+  return a + b; 
+}
+
+let sum = add(5, 3); // sum will be 8
+Get a value from a data lookup:
+
+JavaScript
+
+function getUser(id) {
+  // (Simplified example)
+  if (id === 1) {
+    return { name: "John Doe", age: 30 };
+  } else {
+    return null; 
+  }
+}
+
+let user = getUser(1); 
+Control program flow:
+
+JavaScript
+
+function isEven(num) {
+  if (num % 2 === 0) {
+    return true; 
+  } else {
+    return false; 
+  }
+} */
