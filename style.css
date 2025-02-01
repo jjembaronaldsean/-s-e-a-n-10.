@@ -675,16 +675,16 @@ section {
 
 .home-sci {
     position: absolute;
-    left:19rem;
+    
     /* bottom: 4rem; */
-    width: fit-content; 
+    width:40% ; 
     overflow: hidden;
     /* cursor: pointer; */
     display: flex; /* Arrange icons horizontally */
     justify-content: space-between; /* Distribute icons evenly */
     align-items: center; /* Align icons vertically in the center */
   /* Optional: Add some margin or padding */
-    /* margin: 10px 10px; Margin top and bottom */
+    margin: 10px 10px; Margin top and bottom
     padding: 5px 5px; /* Padding around the icons */
     border: 1px red solid;
   
