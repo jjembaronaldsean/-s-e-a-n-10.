@@ -4,6 +4,7 @@
 *{
     /*font-family: 'poppins', sans-serif;*/
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -693,7 +694,7 @@ section {
   font-size: 30px;
   font-family: cursive;
   /* padding: 5px 10px; */
-  margin:0px;
+  
   justify-content: center;
   align-items: center;
   text-shadow: 2px 4px grey;
