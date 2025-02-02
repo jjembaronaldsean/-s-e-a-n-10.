@@ -693,8 +693,7 @@ section {
   font-size: 30px;
   font-family: cursive;
   /* padding: 5px 10px; */
-  margin-right: 10px;
-  margin-left: 5px;
+  margin:0px;
   justify-content: center;
   align-items: center;
   text-shadow: 2px 4px grey;
