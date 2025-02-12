@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+</head>
+<body>
+  <h1>Product Details</h1>
+
+  <div id="product-details">
+    </div>
+
+  <script>
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (productId) {
+      // Fetch product details based on productId (e.g., using fetch or XMLHttpRequest)
+      fetch(`/api/products/${productId}`) // Replace with your API endpoint
+        .then(response => response.json())
+        .then(product => {
+          // Display the product details
+          const productDetailsDiv = document.getElementById('product-details');
+          productDetailsDiv.innerHTML = `
+            <h2>${product.name}</h2>
+            <img src="${product.image}" alt="${product.name}">
+            <p>${product.description}</p>
+            <p>Price: ${product.price}</p>
+            `;
+        })
+        .catch(error => {
+          console.error("Error fetching product details:", error);
+          const productDetailsDiv = document.getElementById('product-details');
+          productDetailsDiv.innerHTML = "<p>Error loading product details.</p>";
+        });
+    } else {
+      const productDetailsDiv = document.getElementById('product-details');
+      productDetailsDiv.innerHTML = "<p>Product ID not provided.</p>";
+    }
+  </script>
+
+</body>
+</html>
+

@@ -301,3 +301,117 @@ function isEven(num) {
     return false; 
   }
 } */
+
+
+
+  // JSON data  START
+  let text = '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+
+// Parse the JSON data
+let obj = JSON.parse(text);
+
+// Access the object properties
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+
+// JSON data  END
+
+
+
+
+
+
+
+
+/* opt 1
+
+const detailsLinks = document.querySelectorAll('.details-link');
+
+detailsLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the link from actually navigating
+
+    const productId = event.target.dataset.productId;
+    // Here, you would use JavaScript to fetch more details 
+    // for the product with the ID 'productId' (e.g., 'senbono').
+    // You could then redirect to a details page, open a modal, etc.
+    console.log("Showing details for product ID: " + productId);
+    // Example redirect:
+    // window.location.href = `/product_details.html?id=${productId}`;
+  });
+});
+*/
+
+
+  // opt 2  START
+function showDetails(productId) {
+  // Fetch details for productId (like 'senbono')
+  console.log("Showing details for " + productId);
+  // You could redirect, open a modal, etc. here.
+  // Example redirect:
+  // window.location.href = `/product_details.html?id=${productId}`;
+}
+
+// ... (Your existing code)
+
+// after the details page
+function showDetails(productId) {
+  // Redirect to the details page, passing the product ID as a query parameter
+  window.location.href = `/product_details.html?id=${productId}`;
+}
+
+// ... (Rest of your code)
+
+
+
+// server side
+const express = require('express');
+const app = express();
+const port = 3000; // Choose a port
+
+// Sample product data (replace with database query)
+const products = {
+  "senbono": {
+    "name": "SDNWAY Camera",
+    "image": "/images/tool box/SDNWAY handheld thermal imaging cam .jpg",
+    "description": "Detailed description...",
+    "price": 1000000
+  },
+  // ... more products
+};
+
+app.get('/api/products/:id', (req, res) => {
+  const productId = req.params.id;
+  const product = products[productId];
+
+  if (product) {
+    res.json(product); // Send the product data as JSON
+  } else {
+    res.status(404).json({ message: 'Product not found' }); // Send a 404 error
+  }
+});
+
+app.listen(port, () => {
+  console.log(`API server listening at http://localhost:${port}`);
+});
+
+
+
+
+
+
+// xmel
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
