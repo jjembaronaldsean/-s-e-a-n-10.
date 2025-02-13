@@ -568,7 +568,7 @@ section {
     align-items: center;
     width: 60rem;
     height: 5rem;
-    gap: 10px;
+    gap: 20px;
     /* border: red 1px solid; */
    padding: 10px 20px;
    left: 10px;
@@ -586,7 +586,7 @@ section {
      background: var(--main-color) goldenrod ;
     background-size: 96% 10px;
 
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     height: 4rem;
     border: 2rem solid var(--main-color);
     border-radius: .8rem;
@@ -690,7 +690,7 @@ section {
 
 .home-sci {
     position: absolute;
-    left:19rem;
+    margin-left: 30px;
     /* bottom: 4rem; */
     width: fit-content; 
     overflow: hidden;
@@ -699,17 +699,18 @@ section {
     justify-content: space-between; /* Distribute icons evenly */
     align-items: center; /* Align icons vertically in the center */
   /* Optional: Add some margin or padding */
-    /* margin: 10px 10px; Margin top and bottom */
+    margin: 20px 20px; /* Margin top and bottom */
     padding: 5px 5px; /* Padding around the icons */
     border: 1px red solid;
   
 }
 
-.home-sci p {
+.p p{
   color: blue;
   background-color: #fff;
   opacity: .5;
   gap: 10px;
+  width: 40rem;
   /* border: red 1px solid; */
   border-radius: 10px;
   font-size: 30px;
@@ -717,6 +718,7 @@ section {
   /* padding: 5px 10px; */
   /* margin-right: 10px;
   margin-left: 5px; */
+  margin-left: 25px;
   justify-content: center;
   align-items: center;
   text-shadow: 2px 4px grey;
@@ -725,7 +727,7 @@ section {
 }
 
 
-.home-sci .bx {
+.p .bx {
   color: rgb(188, 167, 4); 
   /* background: transparent;  */
   border-radius: 50%;
@@ -766,7 +768,7 @@ section {
 
 
 .home-sci a i {
-  font-size: 30px; /* Adjust font size as desired */
+  font-size: 40px; /* Adjust font size as desired */
   transition: transform 0.2s ease-in-out; /* Add smooth hover transition */
   cursor: pointer !important;
   /* Other styles for the icons */
@@ -2378,9 +2380,11 @@ word-break: break-all;
 
 
 @media (max-width: 768px) {
+  
   .header {
     background: #000;
     padding: 1rem 4%;
+    margin: 0;
     color: #fff;
     height: 60px;
     width: 100%;
@@ -2406,6 +2410,8 @@ word-break: break-all;
   }
 
   .body {
+    padding: 0;
+    margin: 0;
     background-image: url('/images/20.1.jpg');
     background-repeat: no-repeat;
     background-size: cover; /* Or contain, adjust as needed */
@@ -2454,13 +2460,14 @@ word-break: break-all;
 
 
   .home-content{
-    width: 49%;
+    width: 100%;
+    padding: 0 2%;
   }
   .home{
-    width: 50.5%;
+    width: 0%;
     height:100%vh;
-    padding: 0 4%;
-    width: 100%; /* Or adjust as needed */
+    
+    /* width: 100%; Or adjust as needed */
     
   }
 
@@ -2480,28 +2487,35 @@ word-break: break-all;
   .home-content span {
     font-size: 2em;
   }
-  .btn-box,.buton   {
-    left: 10px;
-    width:fit-content;
+  .btn-box  {
+  border: red 1px solid;
+  
+
+    /* width:fit-content; */
   }
   .btn-box .btn {
-  font-size: 10px;
-  width: fit-content;
-}
+   
+    font-size: 10px;
+    margin-left: -10px;
+    width: fit-content;
+    /* padding: 10px 20px; Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   .home-sci {
     display: flex;
-    left: 5em;
-    width: 45%;
-    gap: 0.5em;
-    
+   
   }
-  .home-sci p {
+  .p p {
     font-size: 2em;
-    width: fit-content;
+    width: 25rem;
     /* display: flex; */
     /* position:relative; */
   }
-  .home-sci .bx {
+  .p .bx {
    font-size: 1.5rem;
    left: 1em;
    right: 1em;
@@ -2509,17 +2523,17 @@ word-break: break-all;
   
   .home-sci a i{
     font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
   }
 
   .home-imgHover  {
-    width: 50.5%;
-    height: 99%;
-    right: 3rem;
+   display: none;
   }
   
-.home-imgHover:hover {
+/* .home-imgHover:hover {
  cursor: pointer;
-}
+} */
 
 
 .projects h2 {
