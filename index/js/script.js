@@ -73,6 +73,24 @@ let navLinks = document.querySelectorAll('header nav a');
 
 
 
+
+//STARTOF NAV BAR @MEDIA
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+//ENDOF NAV BAR @MEDIA
+
+
+
+
+
 /*
  // Get the button element (assuming the button has an ID)
 const button = document.getElementById("about");  // Replace with actual button ID
@@ -129,6 +147,7 @@ fetch('/update_views')
  // setInterval(updateViewerCount, 1000); // Update every second 
 
 // END OF VIEWERS
+
 
 
 
