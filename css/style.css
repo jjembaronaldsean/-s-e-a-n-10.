@@ -417,7 +417,7 @@ section {
 /*my home section pic*/
 .home {
     display: flex;
-    border: red 1px solid;
+    /* border: red 1px solid; */
     
     /*align-items: center;*/
     padding:  0px 0px 0px 0px;
@@ -456,7 +456,7 @@ section {
   width: 41.5%;
   height: 99%;
   background: transparent;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   transition: 3s;
   overflow: hidden;
 }
@@ -503,7 +503,7 @@ section {
   width: 49%;
     /* max-width: 60rem; */
     z-index: 99;
-    border: red 1px solid;
+    /* border: red 1px solid; */
     border-radius: 10px;
     overflow: hidden;
     margin-right: 0.5%;
@@ -761,7 +761,7 @@ section {
   /* Optional: Add some margin or padding */
     margin: 20px 20px; /* Margin top and bottom */
     padding: 5px 5px; /* Padding around the icons */
-    border: 1px red solid;
+    /* border: 1px red solid; */
   
 }
 
@@ -2589,6 +2589,7 @@ word-break: break-all;
   .home-content .multi{
     font-size: 1.5rem;
   }
+  
   .home-content p {
     font-family: 'poppins',sans-serif;
     font-size: 1rem;
@@ -2604,7 +2605,7 @@ word-break: break-all;
     font-size: 1em;
   }
   .btn-box  {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
     width: 27rem;
     left: 6px;
@@ -2644,7 +2645,7 @@ word-break: break-all;
    
   }
   .p p {
-    border: red 1px solid;
+    /* border: red 1px solid; */
     font-size: 2em;
     width: 22rem;
     opacity: 0.7;
