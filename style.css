@@ -2751,7 +2751,7 @@ word-break: break-all;
 }
 
 .read_more-container .read_more-box {
-/*  */
+border: grey 2px inset;
 }
 
 
