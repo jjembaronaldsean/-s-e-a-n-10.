@@ -2558,16 +2558,11 @@ word-break: break-all;
 
 
   .home {
- 
-    
-    
+    border: #555 1px solid;
        background: url('/images/about.erase.zoom.jpg') no-repeat center;
-      
       background-size: cover;
       width: 50%;
-      background-position-x: right;
-      
-   
+      background-position-x: right; 
 }
 
 
@@ -2590,7 +2585,11 @@ word-break: break-all;
   opacity: .8;
 }
 
- 
+ .home-content{
+  /* border: red 1px inset; */
+  background: #000;
+  overflow: hidden;
+ }
 
   .home-content h1 {
     font-size: 1rem;
@@ -2672,6 +2671,7 @@ word-break: break-all;
     display: flex;
     width: 15em;
     left: 15px;
+  
     /* border: 1px red solid; */
   }
 
