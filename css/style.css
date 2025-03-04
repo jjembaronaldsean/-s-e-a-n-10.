@@ -433,8 +433,7 @@ section {
       background-size: cover;
       
       background-position-x: right;
-      
-    overflow: hidden;
+  
     /*height: 100%;*/
     background-attachment:fixed; 
     background-size: 100%;
@@ -452,7 +451,7 @@ section {
   position: absolute;
   top: 0;
   bottom: 10px;
-  right: 18em;
+  right: 15em;
   width: 41.5%;
   height: 99%;
   background: transparent;
@@ -2558,18 +2557,40 @@ word-break: break-all;
   }
 
 
-  .home-content{
-    width: 50%;
-    /* border: 1px red solid; */
-    padding: 0 2%;
-  }
-  .home{
-    width: 50%;
-    height:100%vh;
-    /* border: 1px red solid; */
-    /* width: 100%; Or adjust as needed */
+  .home {
+ 
     
-  }
+    
+       background: url('/images/about.erase.zoom.jpg') no-repeat center;
+      
+      background-size: cover;
+      width: 50%;
+      background-position-x: right;
+      
+   
+}
+
+
+
+.home-imgHover  {
+  position: absolute;
+  bottom: 10px;
+  right: 3.5rem;
+  width: 41%;
+  height: 99%;
+  background: transparent;
+  /* border: 2px solid red; */
+  transition: 3s;
+  overflow: hidden;
+}
+
+
+.home-imgHover:hover {
+  background: var(--bg-color);
+  opacity: .8;
+}
+
+ 
 
   .home-content h1 {
     font-size: 1rem;
@@ -2672,18 +2693,11 @@ word-break: break-all;
 
   .home-sci a i{
     padding: 0px;
-    font-size: 1em;
+    font-size: 1.2em;
     justify-content: center;
     align-items: center;
   }
 
-  .home-imgHover  {
-   display: none;
-  }
-  
-.home-imgHover:hover {
- cursor: pointer;
-} 
 
 
 .projects h2 {
