@@ -2586,7 +2586,7 @@ word-break: break-all;
 }
 
  .home-content{
-  /* border: red 1px inset; */
+   border: grey 1px solid;
   background: #000;
   overflow: hidden;
  }
