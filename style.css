@@ -2156,6 +2156,10 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 
 
 .tool-box .tools-container .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
   background:#fff ;
   border-radius: 12px;
@@ -2196,8 +2200,6 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 
 .tool-box .tools-container  .image-box p{
   /* border: red 1px solid; */
-  justify-content: space-evenly;
-  align-items: center;
   font-size: 15px;
   color: #000;
   opacity: .6;
