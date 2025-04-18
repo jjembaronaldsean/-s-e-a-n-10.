@@ -1,4 +1,6 @@
 
+
+
 /*STICKY 
 HEADER*/
 //toggle icon navbar
@@ -75,15 +77,25 @@ let navLinks = document.querySelectorAll('header nav a');
 
 
 //STARTOF NAV BAR @MEDIA
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+const toggleButton = document.getElementById('responsivemenuToggleButton');
+const navbarLinks = document.querySelector('.navbar-links');
+const openIcon = document.querySelector('.openIcon');
+const closeIcon = document.querySelector('.closeIcon');
+
+if (toggleButton && navbarLinks && openIcon && closeIcon) {
+  toggleButton.addEventListener('click', function() {
+    navbarLinks.classList.toggle('open');
+    toggleButton.classList.toggle('open'); // Toggle 'open' class on the button itself
+
+    // Toggle visibility of icons based on whether navbarLinks has 'open' class
+    if (navbarLinks.classList.contains('open')) {
+      openIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      openIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+  });
 }
 //ENDOF NAV BAR @MEDIA
 
@@ -110,38 +122,43 @@ button.addEventListener("click", onClick);
 
 
 
+//VIEWERS START
 
-//  START OF viewers
- // Initialize viewerCount 
-// Server (Node.js with Express)
-const express = require('express');
-const app = express();
-const db = require('./db'); // Your database connection
-
-app.get('/update_views', (req, res) => {
-  db.query('UPDATE views SET count = count + 1', (err, result) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send('Error updating count');
-    } else {
-      db.query('SELECT count FROM views', (err, result) => { // Get the updated count
-        if (err) {
-          console.error(err);
-          res.status(500).send('Error getting count');
-        } else {
-          res.json({ count: result[0].count }); // Send back the count as JSON
-        }
-      });
+fetch('/get_views')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-  });
-});
-
-// Client-side JavaScript
-fetch('/update_views')
-  .then(response => response.json())
+    return response.json();
+  })
   .then(data => {
     document.getElementById("viewer-count").textContent = data.count;
-  });
+  })
+  .catch(err => console.error('Error loading count:', err));
+
+// Update count (only once per session)
+if (!sessionStorage.getItem('viewCounted')) {
+  fetch('/update_views', { method: 'POST' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById("viewer-count").textContent = data.count;
+      sessionStorage.setItem('viewCounted', 'true');
+    })
+    .catch(err => console.error('Error updating count:', err));
+}
+
+/*CREATE TABLE views (
+  id SERIAL PRIMARY KEY,
+  count BIGINT NOT NULL DEFAULT 0
+);
+
+-- Insert initial value
+INSERT INTO views (count) VALUES (0);*/
 
  // You can remove this if you don't need real-time updates
  // setInterval(updateViewerCount, 1000); // Update every second 
@@ -288,6 +305,67 @@ const typed = new Typed ('.multi', {
 
 
 
+//START OF GAMES
+
+//search
+
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
+
+  searchButton.addEventListener('click', function() {
+    const searchTerm = searchInput.value;
+    if (searchTerm) {
+      // Perform the search action here
+      console.log('Searching for:', searchTerm);
+      // Example: Redirect to a search results page
+      // window.location.href = '/search?q=' + encodeURIComponent(searchTerm);
+    }
+  });
+
+    searchInput.addEventListener("keypress", function(event){
+        if (event.key === "Enter"){
+            event.preventDefault();
+            searchButton.click();
+        }
+    });
+
+});
+//search
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('image-slider');
+    const slides = slider.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+
+    // Set the interval for auto-rotation (e.g., every 3 seconds)
+    setInterval(nextSlide, 3000); // 3000 milliseconds = 3 seconds
+  });
+
+
+//END OF GAMES
+
+
+
+
 
 
 /*function add(a, b) {
@@ -370,67 +448,55 @@ detailsLinks.forEach(link => {
   // opt 2  START
 function showDetails(productId) {
   // Fetch details for productId (like 'senbono')
-  console.log("Showing details for " + productId);
-  // You could redirect, open a modal, etc. here.
-  // Example redirect:
   // window.location.href = `/product_details.html?id=${productId}`;
 }
+  // Get the product ID from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
 
+  if (productId) {
+    // Fetch product details based on productId (e.g., using fetch or XMLHttpRequest)
+    fetch(`/"https://www.sean10.com/products/${productId}`) // Replace with your API endpoint
+      .then(response => response.json())
+      .then(product => {
+        // Display the product details
+        const productDetailsDiv = document.getElementById('product-details');
+        productDetailsDiv.innerHTML = `
+          <h2>${product.name}</h2>
+          <img src="${product.image}" alt="${product.name}">
+          <p>${product.description}</p>
+          <p>Price: ${product.price}</p>
+          `;
+      })
+      .catch(error => {
+        console.error("Error fetching product details:", error);
+        const productDetailsDiv = document.getElementById('product-details');
+        productDetailsDiv.innerHTML = "<p>Error loading product details.</p>";
+      });
+  } else {
+    const productDetailsDiv = document.getElementById('product-details');
+    productDetailsDiv.innerHTML = "<p>Product ID not provided.</p>";
+  }
 // ... (Your existing code)
 
-// after the details page
-function showDetails(productId) {
-  // Redirect to the details page, passing the product ID as a query parameter
-  window.location.href = `/product_details.html?id=${productId}`;
-}
-
-// ... (Rest of your code)
-
-
-
-// server side
-const express = require('express');
-const app = express();
-const port = 3000; // Choose a port
-
-// Sample product data (replace with database query)
-const products = {
-  "senbono": {
-    "name": "SDNWAY Camera",
-    "image": "/images/tool box/SDNWAY handheld thermal imaging cam .jpg",
-    "description": "Detailed description...",
-    "price": 1000000
-  },
-  // ... more products
-};
-
-app.get('/api/products/:id', (req, res) => {
-  const productId = req.params.id;
-  const product = products[productId];
-
-  if (product) {
-    res.json(product); // Send the product data as JSON
-  } else {
-    res.status(404).json({ message: 'Product not found' }); // Send a 404 error
-  }
-});
-
-app.listen(port, () => {
-  console.log(`API server listening at http://localhost:${port}`);
-});
 
 
 
 
 
 
-// xmel
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       document.getElementById("demo").innerHTML = xhttp.responseText;
-    }
-};
-xhttp.open("GET", "filename", true);
-xhttp.send();
+/* OPT 1 return   <a href="[RETURN_URL]">
+<img src ="[IMAGE_SRC]" alt="[ALT_TEXT]"*/
+// Window.location.href = '[RETURN_URL]';
+
+/* OPT 2  <img src="[IMAGE_SRC]">  alt "[ALT_TEXT]" onclick="window.location.href = '[RETURN_URL]';">
+document.getElementById('myImage').addEventListener('click',function(){
+  window.location.href = '[RETURN]';
+});*/
+
+
+
+
+
+
+
