@@ -76,7 +76,8 @@ body {
 
 
 .header.sticky {
-  background:  var(--bg-color);
+  background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43));
+  opacity: .8;
 }
 
 
@@ -301,101 +302,141 @@ body {
 }
 
 /* END VIEWERS */
-
-
-.navbar  {
+/* Navbar Styles */
+.navbar {
   position: relative;
   right: 1em;
   overflow: hidden;
-   /* limit number of words 👍👍👉*/
-   display: -webkit-box;
-   -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
-   -webkit-box-orient: vertical;
-   text-overflow: ellipsis;
-   overflow:hidden;
-   width: 50%;
-   /* border: red 1px solid; */
+  width: 50%;
 }
 
-
-.navbar  a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
+.navbar-links a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 2rem;
+  transition: 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: var(--main-color);
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--main-color);
 }
 
-
-#menu-icon {
-    position: relative;
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
+/* Responsive Menu Toggle Button */
+#responsivemenuToggleButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
-
-/* START */
-  /* Basic styling for the navigation */
-.topnav {
-  overflow: hidden; /* Prevents content from overflowing */
-  background-color: #333; /* Example background color */
+#responsivemenuToggleButton svg {
+  height: 1.5em;
+  width: 1.5em;
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+#responsivemenuToggleButton .openIcon {
+  display: block; /* Open icon visible by default */
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+#responsivemenuToggleButton .closeIcon {
+  display: none; /* Close icon hidden by default */
 }
 
-.topnav a.active {
-  background-color: #4CAF50; /* Example active link color */
-  color: white;
+#responsivemenuToggleButton.open .openIcon {
+  display: none; /* Hide open icon when menu is open */
 }
 
-.topnav .icon {
-  display: none; /* Initially hidden on larger screens */
+#responsivemenuToggleButton.open .closeIcon {
+  display: block; /* Show close icon when menu is open */
 }
-
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;} /* Hide all but the first link */
-  .topnav a.icon {
-    float: right;
-    display: block;
+@media screen and (max-width: 768px) {
+  #responsivemenuToggleButton {
+    display: block; /* Show toggle button on small screens */
+    position: absolute; /* Position it for better control */
+    top: 1rem; /* Adjust top spacing as needed */
+    right: 1rem; /* Adjust right spacing as needed */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem; /* Add some padding for touch */
+    z-index: 10; /* Ensure it's above the menu */
+  }
+
+  #responsivemenuToggleButton.closeIcon {
+    display: none; /* Initially hide the close icon */
+    width: 24px;
+    height: 24px;
+    stroke: currentColor; /* Inherit stroke color */
+  }
+
+  #responsivemenuToggleButton.openIcon {
+    display: block; /* Initially show the open icon */
+    width: 24px;
+    height: 24px;
+    stroke: currentColor; /* Inherit stroke color */
+  }
+
+  #responsivemenuToggleButton.open.openIcon {
+    display: none; /* Hide open icon when menu is open */
+  }
+
+  #responsivemenuToggleButton.open.closeIcon {
+    display: block; /* Show close icon when menu is open */
+  }
+
+.navbar-links {
+    display: none; /* Hide navbar links by default on small screens */
+    width: 100%; /* Full width */
+    flex-direction: column;
+    align-items: center;
+    background-color: black; /* Background color for the menu */
+    padding: 1rem;
+    position: absolute;
+    top: 4rem; /* Adjust based on your design and button height */
+    left: 0;
+    right: 0;
+  }
+
+.navbar-links.open {
+    display: flex; /* Show navbar links when menu is open */
+  }
+
+.navbar-links a {
+    width: 90%; /* Give some left/right margin */
+    padding: 0.75rem; /* Adjust padding */
+    text-align: center;
+    border-radius: 10px; /* Adjust border radius */
+    border: 1px goldenrod inset;
+    margin: 0.5rem 0; /* Spacing between links */
+    color: white; /* Set link color */
+    text-decoration: none; /* Remove underlines */
+  }
+
+.navbar-links a.active {
+    background-color: goldenrod; /* Style for the active link */
+    color: black;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-/* END */
+
+/* end of nav toggle */
+
+
+
+
+
 
 
 
@@ -502,7 +543,7 @@ section {
   width: 49%;
     /* max-width: 60rem; */
     z-index: 99;
-    /* border: red 1px solid; */
+    border: grey 1px dotted;
     border-radius: 10px;
     overflow: hidden;
     margin-right: 0.5%;
@@ -514,7 +555,7 @@ section {
   display: inline-block;
    font-size: 6.6rem;
    font-weight: 600;
-   font-family: 'poppins',sans-serif;
+   font-family:'Courier New', Courier, monospace;
    line-height:  1.3;
    font-size: 'poppins',sans-serif;
    opacity: 3px;
@@ -547,13 +588,12 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 43rem;
+    width: 49rem;
     left: 20px;
     margin-bottom: 5px;
     margin-top: 8px;
     background:#fff ;
     border-radius: 10px;
-    font-family: 'poppins',sans-serif;
     opacity: 0.7;
     
 }
@@ -576,9 +616,10 @@ section {
      /* transform: skewX(40deg); */
      overflow: hidden;
     position: relative;
-    width: 43rem;
+    width: 49rem;
     padding: 5px 20px;
     margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -869,30 +910,40 @@ section {
 
  /* nav/proejcts */
 
- /* Target the section with class "projects" */
-.projects {
-  /* Set some margin for the section */
-  margin-bottom: 5rem ;  /* Margin top and bottom of 2rem (can be adjusted) */
-}
-
-/* Target the heading element within the section */
-
-
-
-.projects h2 {
-  position: absolute;
- padding: 5px 5px;
+ .projects-container{
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: 5em;
-  margin-top: 15px;
-  left: 43%;
-  background: black;
-  border: #007bff solid 2px;
+  justify-items: center;
+  font-family: 'poppins',sans-serif;
+  border-radius: 10px;
+  border: grey 1px dotted;
+  /* background: #000; */
+  padding: 20px 20px;
 }
 
 
-.projects span  {
+
+
+
+
+.projects-container h2 {
+ padding: 5px 5px;
+  font-size: 5em;
+  width: fit-content;
+  background: black;
+  /* border: #007bff solid 2px; */
+  font-family: 'Courier New', Courier, monospace;
+    /* limit number of words 👍👍👉*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+}
+
+
+.projects-container h2 span  {
   color: var(--main-color);
  
 }
@@ -900,22 +951,23 @@ section {
 
 
 
-.projects-container  {
+.projects-container  .slot-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 15em;
+  margin-top: 15px;
   /* overflow: hidden; */
   overflow: visible; /* Or remove this line entirely */ 
   /* border: #007bff solid 2px; */
   cursor: auto;
+  
 }
 
 
-.projects-container .projects-box {
-  flex: 1 1 30rem;
+.projects-container .slot-container .projects-box {
+  /* flex: 1 1 30rem; */
   background:#333;
   border-radius: 2rem;
   padding: 3rem 2rem 4rem;
@@ -924,6 +976,7 @@ section {
   /* transition: .5s ease; */
   /* cursor: pointer; */
   height: 500px;
+  width: 400px;
   /* overflow: hidden; */
   overflow: visible; /* Or remove this line entirely */ 
   /* border: #007bff solid 2px; */
@@ -944,8 +997,8 @@ section {
 
 
 
-.projects-container .projects-box::after ,
-.projects-container .projects-box::before {
+.projects-container .slot-container .projects-box::after ,
+.projects-container .slot-container .projects-box::before {
   content: '';
   position: absolute;
   height: 100%;
@@ -963,7 +1016,7 @@ section {
 
 
 
-.projects-container .projects-box::before {
+.projects-container .slot-container .projects-box::before {
   filter: blur(1.5rem);
   opacity: 0.5;
 
@@ -979,36 +1032,10 @@ section {
 }
 
 
-/* 
-
-.projects-container .projects-box:hover::after {
-  opacity: 0; 
-  filter: blur(0); /* Remove blur on hover 
-}
- 
-
-
-.projects-container .projects-box:hover {
-  overflow: hidden;
-  /* border-color:blueviolet; */
-  /* color: #000; */
-  /* transform: scale(1); */
-  /* background: rgb(224, 214, 214); */
-  /* font-family: cursive; */
-  /* font-weight: 600; */
-  /* font-family: Arial, Helvetica, sans-serif; */
-    /* ... other hover styles ... */
-    /* border: 6px solid green; Keep the border style 
-
-} */
-
-/* end of border spin nimation  */
-
-
 
 
 /* Target the icon element */   /*i|bx*/
- .projects-box  .bx {
+ .projects-container  .slot-container .projects-box  .bx {
   /* Adjust properties as needed */
   font-size: 5em;  /* Example: Set the font size (adjust as needed) */
   color: blueviolet;  /* Example: Set the color (adjust as needed) */
@@ -1022,7 +1049,7 @@ section {
 
 
 /* Target the icon element */   /*i|bx*/
- .projects-box  .bx:hover {
+.projects-container  .slot-container .projects-box  .bx:hover {
   
   /* Adjust properties as needed */
   font-size: 5em;  /* Example: Set the font size (adjust as needed) */
@@ -1037,7 +1064,7 @@ section {
 
 
 /* img */
-.projects-box  img  {
+.projects-container  .slot-container .projects-box  img  {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -1053,7 +1080,7 @@ section {
 
 
 /* vdeo */
-.projects-box  video  {
+.projects-container  .slot-container .projects-box  video  {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -1067,36 +1094,36 @@ section {
 
 
 
-mark {
+.projects-container  .slot-container mark {
   padding: 2px 2px ; 
     border-radius: 8px; 
     border: 4px black inset; 
     text-shadow: grey 1.4px 1px;
 }
 
-mark :hover{
+.projects-container  .slot-container mark :hover{
   color: #000;
 }
 
 
-.projects-box h3  {
+.projects-container  .slot-container .projects-box h3  {
   font-size: 2.6rem;
   color: orange;
   text-transform: uppercase;
   overflow: hidden;
-  /* limit number of words 👍👍👉*/
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  /* limit number of words 👍👍*/
-  /* border: #007bff solid 2px; */
+   /* limit number of words 👍👍👉*/
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* Limits to one line */
+   -webkit-box-orient: vertical;
+   overflow: hidden; /* Ensures content is clipped */
+   text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+   white-space: nowrap; /* Prevents text from wrapping to the next line*/
   width:95%;
   font-family: "poppins",sans-serif;
   text-shadow: blueviolet 2px 2px;
 }
 
-.projects-box h3:hover {
+.projects-container  .slot-container .projects-box h3:hover {
   color: black;
   text-transform: uppercase;
   text-shadow:grey  2px 6px;
@@ -1106,7 +1133,7 @@ mark :hover{
   opacity: 0.9;
 }
 
-.projects-box  h3 span {
+.projects-container  .slot-container .projects-box  h3 span {
   font-size: 2.6rem;
   color: greenyellow;
   text-transform: lowercase;
@@ -1116,7 +1143,7 @@ mark :hover{
 
 
 
-.projects-box p  {
+.projects-container  .slot-container .projects-box p  {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
   overflow: hidden;
@@ -1127,18 +1154,12 @@ mark :hover{
   text-overflow: ellipsis;
   /* limit number of words 👍👍*/
   width:95%;
-  
+  color: /*steelblue*/ #fff;
 }
 
-.projects-box p {
-  color: /*steelblue*/ #fff;
-  /* background: #ddd;
-  border-radius: 8px;
-  padding: 3px 3px;
-*/
-} 
 
-.projects-box p:hover {
+
+.projects-container  .slot-container .projects-box p:hover {
   background-color: #ddd;
   color: #555;
   padding: 4px 4px;
@@ -1147,20 +1168,20 @@ mark :hover{
   opacity: 0.9;
 }
 
-.projects-box  p span:hover{
+.projects-container  .slot-container .projects-box  p span:hover{
   color: #000;
 }
 
 
-.projects-box span {
+.projects-container  .slot-container .projects-box span {
   color: rgb(130, 144, 52);
 }
 
-.projects-box span:hover {
+.projects-container  .slot-container .projects-box span:hover {
   color: #000;
 }
 
-.projects-box a {
+.projects-container  .slot-container .projects-box a {
   margin: 0;
   color: #000;
   background-color: #fff;
@@ -1168,6 +1189,7 @@ mark :hover{
   padding: 4px 4px 4px 4px;
   justify-content: center;
   text-align: center;
+  text-transform: lowercase;
   overflow: hidden;
   /* width: 4em; */
   font-size: 12px;
@@ -1181,11 +1203,13 @@ mark :hover{
 }
 
 
-.projects-box a:hover{
+.projects-container  .slot-container .projects-box a:hover{
   color: #fff;
   transform: scale(1.5);
   background: black;
-  width: 160px;}
+  width: 160px;
+  text-transform: capitalize;
+}
  
 
 
@@ -1227,164 +1251,6 @@ mark :hover{
   left: 10px;
 }
 
-
-.tools-container {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  background:#966868;
-  /* opacity: .5; */
-  padding-bottom: 6rem;
-  border: blue 2px solid;
-  width: 100%;
-  height: 99%vh;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.tools-container  .row{
- display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* .tools-container .row .col {
-  flex:1 1 1 150px;
-} */
-
-
-.tools-container .imagebox {
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background:#fff;
-  border-radius: 20px;
-  padding: 7px 7px;
-  border: red 2px solid;
-  margin: 10px 10px;
-  width: 350px;
-  height: 550px;
-  
-}
-
-
-.tools-container .imagebox img{
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  width: 300px;
-  height: 350px;
-   margin-bottom: 7px;
-   border: blue 2px solid;
-   background: greenyellow;
-   box-shadow: 9px 5px goldenrod;
-   border-radius: 10px;
-   cursor: pointer;
-}
-
-
-
-
-.tools-container  .price  {
-  position: absolute;
-  border: red 1px solid;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  color: rgb(0, 217, 185);
-  background: #000;
-  font-family: cursive;
-  padding: 10px 10px;
-float: right 5px 5px;
-}
-
-.tools-container  .price  span{
- font-family: 'poppins',sans-serif;
-justify-content: center;
-font-size: 15px;
-color: #000;
-background: #fff;
-border-radius: 40%;
-padding: 7px 7px;
-text-transform: uppercase;
-}
-
-
-.tools-container .bx{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  justify-content: space-evenly;
-position: relative;
-font-size: 50px;
-color: #fff;
-background: transparent;
-border: red 1px solid;
-/* padding: 5px 5px; */
-border-radius: 10px;
-cursor: pointer;
-overflow: hidden;
-transform: 3s ease-in-out;
-
-}
-
-
-
-.tools-container .bx .bxl-whatsapp {
-  color: yellowgreen;
-}
-
-.tools-container .bx .bx-phone-call{
-  color: green;
-}
-
-
-.tools-container .bx .bxl-telegram {
-  color: rgb(66, 131, 119);
-}
-
-.tools-container .bx .bx-message-rounded-dots {
-  color: orange;
-}
-
-.tools-container   p{
-  border: red 1px solid;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5px;
-   margin-bottom: 5px;
-  position: relative;
-  font-size: 30px;
-  color: #fff;
-  opacity: .6;
-  background: #000;
-  border-radius: 10px;
-  padding: 7px 7px;
-  font-family: 'poppins',sans-serif;
-  box-sizing: content-box;
-   /* limit number of words 👍👍👉*/
-   display: -webkit-box;
-   -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
-   -webkit-box-orient: vertical;
-   text-overflow: ellipsis;
-   overflow: hidden;
-   /* limit number of words 👍👍*/
-  
-}
-
-
-/* END OF TOOLS */
 
 
 
@@ -1777,346 +1643,691 @@ word-break: break-all;
 
 
 
-   /*education*/
- .education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: auto;
-    padding-bottom: 5rem;
+/* START OF GAMES */
 
- }
-
- .education .education-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-
- }
-
- .education-column {
-    flex: 1 1 40rem;
- }
-
- .education-column .title {
-    font-size: 3rem;
-    margin: 0 0 1.5rem 2rem;
-
-}
-
-.education-column .education-box {
-    border-left: .2rem solid var(--main-color);
-    /*border-right: .2rem solid var(--main-color);*/
-}
-
-
-.education-box .education-content {
-    position: relative;
-    padding-left: 2rem;
-}
-
-
-
-.education-box .education-content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left:-1.1rem;
-    width: 2rem;
-    height: 2rem;
-    background: var(--main-color);
-    border-radius: 50%;
-}
-
-
-
-
-
-.education-content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid var(--main-color);
-    background-origin: .6rem;
-    margin: 2rem;
-    overflow: hidden;
-
-}
-   
-.education-content .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-
-.education-content .content:hover:before {
-    width: 100%;
-
-
-}
-
-
-.education-content .content .year {
-    font-size: 1.5rem;
-    color:  var(--main-color);
-    padding-bottom: .5rem;
-
-}
-
-.education-content .content .year i {
-    padding-right: .5rem;
-
-
-}
-
-.education-content .content h3 {
-    font-size: 2rem;
-}
-
-.education-content .content p {
-    font-size: 1.6rem;
-    padding-bottom: .5rem;
-
-}
-
-
-
-/*skills*/
-
-
-
-
-
-
- .skills  {
-    padding-bottom: 7rem; /* Assuming you want 7rem padding */
-    background: var(--second-bg-color);
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    /*min-height: auto; You can keep this if you want the section to expand vertically as needed */
- 
- }
-
-
-
-
- 
-
-
-.skills h2 {
-  font-size: 5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-
-}
-
-
-.skills span  {
-  color: var(--main-color);
-}
-
-
-
-
-
-
- /* 
- .skills h2 {
-  text-align: center;
-  line-height: 1.2;
- */
-
-  .skills .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-     gap: 4rem;
-     /* flex: 1 1 40rem; */
-     width: 50%;
-     display: inline-flex;
-    
-  }
-
-
-  
- 
-  .skills-row .skills-column {
-    /* flex: 1 1 40rem; */
-    /* display: flex; */ 
-      column-gap: normal;   
-      flex: 1  1  auto ; /* This makes columns flexible and grow evenly */
-      display: flex; /* Not strictly necessary for even growth, but can be useful for layout*/
-      gap: 5rem;/* Adjust the gap between columns*/
-       
-  }
-
-  
-  .skills-column  .title {
-    font-size: 3rem;
-    /* margin: 0 0 1.5rem 2rem; */
-   margin: 1rem 2rem 3rem 14rem;  /* Top, Right, Bottom, Left */
-
-    position: absolute;
-    justify-items: center;
-    /* padding-bottom: 30px; */
-    align-items: center;
-    
-  }
-
-
-
-  
-  .skills-box .skills-content {
-    position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-     padding: .5rem  1.5rem;
-     z-index: 1;
-     overflow: hidden;
-     margin-top: 5rem;
-     left: 12rem;
-   
-    }
-    
-
-
-
-
-.skills-box .skills-column {
-  width: 40%;
-  align-items: center;
-  justify-items: space-evenly;
-}
-
-
-
-
-
-.skills-box .skills-content::before  {
-  content:'';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: -1;
-  transition: .5s;
-}
-
-
-
-.skills-box .skills-content:hover::before {
+.games-container{
   width: 100%;
+  align-items: center;
+  justify-items: center;
+  font-family: 'poppins',sans-serif;
+  border-radius: 10px;
+  border: grey 1px dotted;
+  background: #000;
+  padding: 20px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+.games-container h2 {
+ padding: 5px 5px;
+  font-size: 2em;
+  width: fit-content;
+  /* align-items: center; */
+  color: #000;
+  text-shadow: 2px 2px #fff;
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  border: #007bff inset 2px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  margin-top: 1em;
+  font-weight: 1000;
+  text-transform: uppercase;
+     /* limit number of words 👍👍👉*/
+     display: -webkit-box;
+     -webkit-line-clamp: 1; /* Limits to one line */
+     -webkit-box-orient: vertical;
+     overflow: hidden; /* Ensures content is clipped */
+     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+     
+}
+
+
+.games-container h2 span  {
+  text-shadow: none;
+  color: var(--main-color);
+  margin-left: 3rem;
+  font-family: 'poppins',sans-serif;
+  text-transform: lowercase;
+  background: #fff;
+  padding: 2px 4px;
+  border-radius: 0px 10px 10px 0px ;
+ 
+  /* 
+   1. top-left corner
+   2.top-right corner
+   3.bottom-right corner
+   4.bottom-left corner
+So, for the border-radius: 0px 10px 10px 0px; declaration: */
 
 }
 
 
 
-  .skills-content .progress {
-    padding: 1rem 0;
-  }
-
-
-  .skills-content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-items: space-between;
-  }
-
-
-  /*.skills-content .progress h3 span {
-    color: var(--text-color);
-  }*/
- 
-
-  .skills-content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-    padding: .5rem;
-    margin: 1rem 0;
-  }
-
-
-
-  .skills-content .progress .bar span {
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: var(--main-color);
-
-  }
-
-
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(1) .bar span{
-    width: 90%;
-  }
 
   
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(2) .bar span{
-    width: 85%;
-  }
 
-
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(3) .bar span{
-    width: 40%;
-  }
-
-
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(4) .bar span{
-    width: 50%;
-  }
-
-
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(5) .bar span{
-    width: 2%;
-  }
-
-
-  .skills-column:nth-child(1)  .skills-content .progress:nth-child(6) .bar span{
-    width: 60%;
-  }
+.games-container .card-container {
+  width: 100%;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 15px;
+   border-radius: 10px;
+   border: 1px black inset;
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  overflow: hidden;
+}
 
 
 
-
-
-
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(1) .bar span{
-    width: 95%; /* This will fill 95% of the progress bar */
-  }
 
   
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(2) .bar span{
-    width: 60%;
-  }
+ .games-container .card-container .gamecard h3  {
+font-size: 12px;
+  color: #000;
+  text-transform: lowercase;
+  /* Apply this class to your element */
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+  margin-bottom: 5px;
+  background:  rgb(136, 161, 170);
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: #000 1px inset;
+  width: 100%;
+  font-family: 'poppins',sans-serif;
+  text-transform: lowercase;
+  font-weight: 900;
+}
 
 
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(3) .bar span{
-    width: 99%;
-  }
 
 
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(4) .bar span{
-    width: 60%;
-  }
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(5) .bar span{
-    width: 80%;
-  }
-  .skills-column:nth-child(2)  .skills-content .progress:nth-child(6) .bar span{
-    width: 100%;
-  }
+
+ .games-container .card-container .gamecard {
+  /* flex: 1 1 30em; flex grow   */
+ align-items: center;
+ text-align: center;
+ width: 200px;
+ height: 250px;
+ border: grey 1px inset;
+ border-radius: 10px;
+ padding: 15px 15px;
+ background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43));
+ /* background-image: conic-gradient( #95d2c3, #fff); */
+ /* justify-content: space-between; */
+ overflow: hidden;
+}
+
+
+
+
+ .games-container .card-container  .gamecard img {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 160px;
+  height: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px #000;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out; /* Optional: Add a smooth transition*/
+ overflow: hidden;
+}
+
+.games-container .card-container .gamecard img:hover {
+  transform: scale(0.8); /*Example: Zoom in*/
+}
+
+
+
+
+
+
+.games-container .card-container .gamecard p{
+  color: #fff;
+  /* text-decoration-line: overline underline; */
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  font-size: 10px;
+  font-weight: 300;
+  padding: 4px 4px;
+  margin-top: 3px;
+  /* border: goldenrod 1px dotted; */
+  border-radius: 10px;
+  gap: 3px;
+  justify-items: center;
+    /* limit number of words 👍👍👉*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+}
+
+.games-container .card-container .gamecard  p span{
+  font-size: 10px;
+  border: none;
+  gap: 2px;
+  margin-right: 10px;
+  text-decoration-line: overline underline;
+  font-family: cursive;
+}
+
+
+
+.games-container .card-container .gamecard .two-buttons  {
+  display: flex;
+    justify-content: space-evenly;
+   gap: 4px;
+}
+
+.games-container .card-container .gamecard .two-buttons .batton {
+  font-size: 10px;
+}
+
+ .games-container .card-container .gamecard .batton{
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: black;
+  margin-top: 3px;
+  padding: 2px 5px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  text-transform: lowercase;
+}
+
+.games-container  .card-container .gamecard  .batton:hover{
+  color: #3e8e41;
+}
+
+
+
+/* END OF GAMES */
+
+
+
+
+
+
+
+
+/* START OF SOFTWARES */
+
+
+.softwares-container{
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  border: grey 1px dotted;
+  background: #000;
+  padding: 20px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+.softwares-container h2 {
+ padding: 5px 5px;
+  font-size: 2em;
+  width: fit-content;
+  /* align-items: center; */
+  color: #000;
+  text-shadow: 2px 2px #fff;
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  border: #007bff inset 2px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  margin-top: 1em;
+  font-weight: 1000;
+  /* width: 95%; */
+  text-transform: uppercase;
+     /* limit number of words 👍👍👉*/
+     display: -webkit-box;
+     -webkit-line-clamp: 1; /* Limits to one line */
+     -webkit-box-orient: vertical;
+     overflow:hidden; /* Ensures content is clipped */
+     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+     
+}
+
+
+.softwares-container h2 span  {
+  text-shadow: none;
+  color: var(--main-color);
+  margin-left: 3rem;
+  text-transform: lowercase;
+  background: #fff;
+  padding: 2px 3px;
+  border-radius: 0px 10px 10px 0px ;
+  /* 
+   1. top-left corner
+   2.top-right corner
+   3.bottom-right corner
+   4.bottom-left corner
+So, for the border-radius: 0px 10px 10px 0px; declaration: */
+
+}
+
+
+
+
+
+  
+
+.softwares-container .card-container  {
+  width: 100%;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 15px;
+   border-radius: 10px;
+   border: 1px black inset;
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+}
+
+
+
+
+
+  
+ .softwares-container .card-container .softwarescard h3  {
+  font-size: 12px;
+  color: #000;
+  text-transform: lowercase;
+  /* Apply this class to your element */
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+  margin-bottom: 5px;
+  background:  rgb(136, 161, 170);
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: #000 1px dotted;
+  width: 100%;
+  font-family: 'poppins',sans-serif;
+  text-transform: lowercase;
+  font-weight: 900;
+}
+
+
+
+
+
+.softwares-container .card-container .softwarescard {
+  /* flex: 1 1 30em; flex grow   */
+ align-items: center;
+ text-align: center;
+ width: 200px;
+ height: 250px;
+ border: grey 1px inset;
+ border-radius: 10px;
+ padding: 15px 15px;
+ /* background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43)); */
+ /* background-image: conic-gradient( #95d2c3, #fff); */
+ background-color: #fff;
+ /* justify-content: space-between; */
+ overflow: hidden;
+}
+
+
+
+ .softwares-container .card-container .softwarescard img {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 160px;
+  height: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 5px #000;
+  margin-bottom: 15px;
+  overflow: hidden;
+   /* Define the transition for the transform property, lasting 3 seconds */
+  transition-property: transform;
+  transition-duration: 3s;
+}
+
+.softwares-container .card-container .softwarescard img:hover {
+  /* Change the transform property on hover */
+  transform: rotate(360deg);
+}
+
+
+
+.softwares-container .card-container .softwarescard p{
+  color: #fff;
+  /* text-decoration-line: overline underline; */
+  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  font-size: 10px;
+  font-weight: 300;
+  padding: 4px 4px;
+  margin-top: 3px;
+  /* border: goldenrod 1px dotted; */
+  border-radius: 10px;
+  gap: 3px;
+  justify-items: center;
+    /* limit number of words 👍👍👉*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+    text-transform: lowercase;
+}
+
+ .softwares-container  .card-container .softwarescard  p span{
+  font-size: 10px;
+  border: none;
+  gap: 2px;
+  margin-right: 10px;
+  text-decoration-line: overline underline;
+  font-family: cursive;
+}
+
+
+
+ .softwares-container .card-container .softwarescard .batton{
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: black;
+  margin-top: 3px;
+  padding: 2px 5px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  text-transform: lowercase;
+   letter-spacing: 1px;
+}
+
+ .softwares-container .card-container .softwarescard  .batton:hover{
+  color: #3e8e41;
+}
+
+
+/* END OF SOFTWARES */
+
+
+
+
+
+
+
+/* start of toolbox */
+.tool-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background:#000;
+  border: grey 1px double;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px 20px;
+}
+
+.tool-box  h2 {
+ font-size: 50px;
+ font-weight: 600;
+ background: #fff;
+ color: #000;
+ width: fit-content;
+ border:grey 1px dashed;
+ padding: 20px 20px;
+ /* margin-bottom: 10px; */
+ /* margin-top: 15px; */
+ border-radius: 10px 0px;
+ text-transform: uppercase;
+
+}
+
+
+.tool-box  h2  span {
+  color: #000;
+  background: skyblue;
+  padding: 10px 10px;
+  border-radius: 0px 10px;
+  font-size: 25px;
+  border:grey 1px dashed;
+}
+
+
+
+
+.tool-box h2 .bx {
+  color: orange;
+  font-size: 25px;
+  margin-left: 15PX;
+}
+
+
+.tool-box .tools-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  border: grey 1px solid ;
+  border-radius: 10px;
+  width: 90%;
+  padding: 10px 10px;
+  /* background: linear-gradient(#333,rgb(176, 172, 172), #fff ,#fff, rgb(176, 172, 172),#333); */
+  background-color: #e7e3e3;
+  gap:15px;
+  margin-top: 30px;
+}
+
+
+
+
+.tool-box .tools-container .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background:#fff ;
+  border-radius: 12px;
+  padding: 10px 10px;
+  border:groove; 
+  /* margin: 5px 5px;*/
+  width: 200px;
+  height:300px;
+  transition: transform 0.3s ease-in-out; /* Optional: Add a smooth transition*/
+  overflow: hidden;
+  filter: drop-shadow(0, 50px 20px #0009);
+ }
+ 
+ .tool-box .tools-container  .image-box:hover {
+   transform: scale(0.9); /*Example: Zoom in*/
+   opacity: 0.8;
+ }
  
 
+
+
+
+.tool-box .tools-container .image-box img{
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  width: 170px;
+  height: 130px;
+   margin-bottom: 7px;
+   border:1px dotted;
+   background: rgb(180, 206, 142);
+   /* box-shadow: 9px 4px black; */
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+
+
+.tool-box .tools-container  .image-box p{
+  /* border: red 1px solid; */
+  font-size: 15px;
+  color: #000;
+  opacity: .6;
+  background: transparent;
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin-top: 5px;
+  font-family: 'poppins',sans-serif;
+   /* limit number of words 👍👍👉*/
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
+   -webkit-box-orient: vertical;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   /* limit number of words 👍👍*/
+  
+}
+
+
+
+
+
+.tool-box .tools-container  .image-box h4  {
+  /* border: red 1px solid; */
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
+  background: #fff;
+  margin-top: 5px;
+  padding: 10px 5px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  gap: 10px;
+}
+
+.tool-box .tools-container .image-box h4  span{
+ font-family: 'poppins',sans-serif;
+font-size: 9px;
+color: #000;
+background: rgb(180, 206, 142);
+border-radius: 40%;
+padding: 7px 7px;
+text-transform: uppercase;
+justify-content: center;
+align-items: center;
+  display: flex;
+  letter-spacing: 2px;
+}
+
+
+.tool-box .tools-container .image-box .bx{
+ padding: 5px;
+align-items: center;
+margin-top: 5px;
+margin-bottom: 5px;
+font-size: 20px;
+color: #fff;
+background: #fff;
+/* border: red 1px solid; */
+display: flex;
+border-radius:10px ;
+cursor: pointer;
+overflow: hidden;
+justify-content: space-evenly;
+
+}
+
+
+
+.tool-box .tools-container  .image-box .bx .bxl-whatsapp {
+  color: yellowgreen;
+  border: groove;
+  transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition*/
+  overflow: hidden;
+}
+
+.tool-box .tools-container  .image-box .bx .bxl-whatsapp:hover {
+  transform: scale(1.3); /*Example: Zoom in*/
+  color: rgba(127, 161, 79, 0.44);
+  border-radius: 12px 0px 0px 0px;
+ }
+ 
+
+
+.tool-box .tools-container .image-box .bx .bx-phone-call{
+  color: green;
+  border: groove;
+  transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition*/
+  overflow: hidden;
+}
+.tool-box .tools-container .image-box .bx .bx-phone-call:hover{
+  transform: scale(1.3); /*Example: Zoom in*/
+  color: rgba(127, 161, 79, 0.44);
+  border-radius: 0px 0px 0px 0px;
+}
+
+
+.tool-box .tools-container  .image-box .bx .bxl-telegram {
+  color: rgb(66, 131, 119);
+  border: groove;
+  transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition*/
+  overflow: hidden;
+}
+
+.tool-box .tools-container  .image-box .bx .bxl-telegram:hover {
+  transform: scale(1.3); /*Example: Zoom in*/
+  color: rgba(127, 161, 79, 0.44);
+  border-radius: 0px 0px 0px 0px;
+}
+
+.tool-box .tools-container .image-box .bx .bx-message-rounded-dots {
+  color: orange;
+  border: groove;
+  transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition*/
+  overflow: hidden;
+}
+
+.tool-box .tools-container .image-box .bx .bx-message-rounded-dots:hover {
+  transform: scale(1.3); /*Example: Zoom in*/
+  color: rgba(127, 161, 79, 0.44);
+  border-radius: 0px 12px 0px 0px;
+}
+
+
+/* END OF TOOLS */
 
 
 
@@ -2371,7 +2582,7 @@ word-break: break-all;
 }
 
 .logo .animate,
-.navbar  .animate,
+.navbar-links  .animate,
 #menu-icon .animate ,
 .home.show-animate .animate {
   animation: showRight 1s ease  forwards;
@@ -2512,49 +2723,7 @@ word-break: break-all;
 
 
 
-  #menu-icon {
-    display:block;
-    cursor: pointer;
-  }
-
-
-
-
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
-    padding: 1em 1em;
-    right: 20px;
-    /* ... (rest of your navbar styles) */
-  }
-
-
-  .navbar.active {
-    left: 0;
-    color: orangered;
-  }
-
-  .navbar a {
-    /* ... (rest of your navbar link styles) */
-    cursor: pointer;
-    display:block;
-  }
-
-  /* Improved active-nav transition (example) */
-  .navbar {
-    background-color: transparent; /* Initial background */
-    transition: background-color 0.25s ease;
-  }
-
-  .navbar.active {
-    background-color: orangered; /* Background when active */
-  }
+ 
 
 
   .home {
@@ -2585,10 +2754,13 @@ word-break: break-all;
   opacity: .8;
 }
 
+
+/* home content */
  .home-content{
   /* border: red 1px inset; */
   background: #000;
   overflow: hidden;
+  border: grey 1px solid;
  }
 
   .home-content h1 {
@@ -2597,7 +2769,7 @@ word-break: break-all;
 
   .home-content .text-animate {
     position: relative;
-    width: 12rem;
+    width: 12.5rem;
     /* left: 20px;
     margin-bottom: 5px;
     margin-top: 8px;
@@ -2698,72 +2870,94 @@ word-break: break-all;
     align-items: center;
   }
 
+  .projects-container{
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
-
-.projects h2 {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
+.projects-container h2 {
+  font-size:40px;
+  border-radius: 10px 0px 10px 0px;
+  padding: 4px 4px;
 }
 
 
-.projects-container  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 10rem;
+  .projects-container  .slot-container .projects-box h3 {
+  font-size:12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.projects-container  .slot-container .projects-box h3 span {
+  font-size:10px;
+}
+
+.projects-container .slot-container {
+  margin-top: 15px;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
  
 }
 
-.projects-container .projects-box {
-  height: 500px;
+.projects-container .slot-container .projects-box {
+  height: 250px;
+  width: 50px;
+  padding: 5px 5px;
  
 }
+
 
 /* Target the icon element */   /*i|bx*/
-.projects-box  .bx {
+.projects-container .slot-container .projects-box  .bx {
   /* Adjust properties as needed */
-  font-size: 5em;  /* Example: Set the font size (adjust as needed) */
+  font-size: 2em;  /* Example: Set the font size (adjust as needed) */
+  margin-top: 5px;
+}
+.projects-container .slot-container .projects-box  p {
+  /* Adjust properties as needed */
+  font-size:10px;  /* Example: Set the font size (adjust as needed) */
 }
 
 
 
 /* img */
-.projects-box  img  {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width:95%;
-  height: 200px;
+.projects-container .slot-container .projects-box  img  {
+  width:33%;
+  height: 100px;
+  margin-top: 5px;
 }
 
 
 
 
 /* vdeo */
-.projects-box  video  {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width:95%;
-  height: 200px;
+.projects-container .slot-container .projects-box  video  {
+  width:45%;
+  height: 100px;
 }
 
 
-.projects-box h3  {
-  font-size: 2.6rem;
+
+.projects-container .slot-container .projects-box p  {
+    /* limit number of words 👍👍👉*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limits to one line */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Ensures content is clipped */
+    text-overflow: ellipsis; /* Adds the "..." if the text overflows */
+    white-space: nowrap; /* Prevents text from wrapping to the next line*/
+  font-size: 10px;
 }
 
-.projects-box p  {
-  font-size: 1.6rem;
+
+.projects-container .slot-container .projects-box mark  {
+  font-size: 10px;
+  color: #000;
 }
 
-.projects-box a {
-
-  font-size: 12px;
+.projects-container .slot-container .projects-box a {
+   font-family: 'poppins',sans-serif;
+  font-size: 10px;
  
 }
 
@@ -2786,6 +2980,7 @@ width: max-content;
 text-shadow: none;
 background: #000;
 color: #fff;
+/* limit */
 display: -webkit-box;
 -webkit-line-clamp: 1; /* Adjust the number of lines as needed */
 -webkit-box-orient: vertical;
@@ -2866,6 +3061,175 @@ font-size: 6px;
 
 
 
+
+
+/* start of games */
+
+.games-container  {
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+
+
+
+.games-container h2 {
+  width: fit-content;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: none;
+  color: #fff;
+  justify-content: center;
+ align-items: center;
+ }
+     
+
+
+
+.games-container h2 span  {
+ color: #000;
+ margin-left: 0px;
+ display: flex;
+ flex-wrap: wrap;
+ position: relative;
+ border-radius: 10px 0px;
+ justify-content: center;
+ align-items: center;
+}
+
+
+
+.games-container .card-container{
+  margin-top: 15px;
+  
+}
+
+
+
+  
+.games-container .card-container .gamecard h3  {
+  font-size: 12px;
+ 
+}
+
+.games-container .card-container .gamecard{
+  grid-template-columns: repeat(auto, minmax(200px, 1fr));
+
+}
+
+
+
+.games-container .card-container .gamecard .batton{
+/*  */
+ 
+}
+
+.games-container .card-container .gamecard .batton:hover{
+ width: 100%;
+ border-radius: 10px;
+}
+
+
+/* END OF games */
+
+
+
+
+
+
+ 
+/* START OF SOFTWARES */
+
+/* Target the heading element within the section */
+
+
+  
+
+.softwares-container  {
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+
+
+
+.softwares-container h2 {
+  width: fit-content;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-shadow: none;
+  color: #fff;
+  justify-content: center;
+ align-items: center;
+ }
+     
+
+
+
+.softwares-container h2 span  {
+ color: #000;
+ margin-left: 0px;
+ display: flex;
+ flex-wrap: wrap;
+ position: relative;
+ border-radius: 10px 0px;
+ justify-content: center;
+ align-items: center;
+}
+
+
+
+.softwares-container .card-container{
+  margin-top: 15px;
+  
+}
+
+
+
+  
+  .softwares-container .card-container .softwarescard h3  {
+  font-size: 12px;
+ 
+}
+
+  
+  .softwares-container .card-container .softwarescard   {
+    grid-template-columns: repeat(auto, minmax(200px, 1fr));
+}
+
+
+
+
+
+ .softwares-container .card-container .softwarescard .batton{
+/*  */
+ 
+}
+
+ .softwares-container .card-container .softwarescard  .batton:hover{
+ width: 100%;
+ border-radius: 10px;
+}
+
+
+/* END OF SOFTWARES */
+
+
+
+
+
+
+
+
+
+
+
 /* submit btn */
 .btn-box {
   justify-self: center;
@@ -2877,9 +3241,9 @@ font-size: 6px;
 
 
   /* ... (rest of your styles) */
+
+
 }
-
-
 
 
 
