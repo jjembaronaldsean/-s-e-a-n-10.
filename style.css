@@ -967,7 +967,7 @@ section {
 
 
 .projects-container .slot-container .projects-box {
-  /* flex: 1 1 30rem; */
+  flex:  33rem;
   background:#333;
   border-radius: 2rem;
   padding: 3rem 2rem 4rem;
@@ -976,8 +976,7 @@ section {
   /* transition: .5s ease; */
   /* cursor: pointer; */
   height: 500px;
-  width: 400px;
-  /* overflow: hidden; */
+  width: 500px;
   overflow: visible; /* Or remove this line entirely */ 
   /* border: #007bff solid 2px; */
    /* ... other styles ... */
@@ -2258,8 +2257,7 @@ align-items: center;
 align-items: center;
 margin-top: 5px;
 margin-bottom: 5px;
-font-size: 15px;
-gap:1px;
+font-size: 20px;
 color: #fff;
 background: #fff;
 /* border: red 1px solid; */
