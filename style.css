@@ -302,136 +302,105 @@ body {
 }
 
 /* END VIEWERS */
-/* Navbar Styles */
-.navbar {
-  position: relative;
-  right: 1em;
-  overflow: hidden;
-  width: 50%;
+
+
+
+
+
+
+
+
+
+
+/* Navbar Styles  start*/
+/* ===== Base Styles ===== */
+.navbar-links {
+  display: none; /* Hidden by default on mobile */
 }
 
 .navbar-links a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 500;
-  margin-left: 2rem;
-  transition: 0.3s;
+  padding: 5px 7px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  display: block;
+  font-family: cursive;
+  transition: background 0.3s;
 }
 
 .navbar-links a:hover,
-.navbar-links a.active {
+.navbar-links a:focus {
   color: var(--main-color);
 }
 
-/* Responsive Menu Toggle Button */
+
+
+/* Toggle Button Styles */
 #responsivemenuToggleButton {
-  background-color: transparent;
-  border: 0;
+  width: 50px;
+  background-color: grey;
+  border: none;
   cursor: pointer;
-  display: none; /* Hidden by default */
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's above other elements */
+  padding: 10px;
+  z-index: 1000;
+  position: fixed;
+  top: 10px;
+  margin-bottom: 10px;
+  right: 30px;
 }
+
 
 #responsivemenuToggleButton svg {
-  height: 1.5em;
-  width: 1.5em;
-  color: #fff;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
-
-#responsivemenuToggleButton .openIcon {
-  display: block; /* Open icon visible by default */
+  width: 24px;
+  height: 24px;
+  stroke: green;
 }
 
 #responsivemenuToggleButton .closeIcon {
-  display: none; /* Close icon hidden by default */
+  display: none;
 }
 
-#responsivemenuToggleButton.open .openIcon {
-  display: none; /* Hide open icon when menu is open */
-}
+/* ===== Desktop Styles ===== */
+@media (min-width: 769px) {
+  .navbar-links {
+    display: flex !important; /* Force show on desktop */
+    gap: 10px;
+  }
 
-#responsivemenuToggleButton.open .closeIcon {
-  display: block; /* Show close icon when menu is open */
-}
+  .navbar-links a {
+    display: inline-block;
+  }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
   #responsivemenuToggleButton {
-    display: block; /* Show toggle button on small screens */
-    position: absolute; /* Position it for better control */
-    top: 1rem; /* Adjust top spacing as needed */
-    right: 1rem; /* Adjust right spacing as needed */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem; /* Add some padding for touch */
-    z-index: 10; /* Ensure it's above the menu */
-  }
-
-  #responsivemenuToggleButton.closeIcon {
-    display: none; /* Initially hide the close icon */
-    width: 24px;
-    height: 24px;
-    stroke: currentColor; /* Inherit stroke color */
-  }
-
-  #responsivemenuToggleButton.openIcon {
-    display: block; /* Initially show the open icon */
-    width: 24px;
-    height: 24px;
-    stroke: currentColor; /* Inherit stroke color */
-  }
-
-  #responsivemenuToggleButton.open.openIcon {
-    display: none; /* Hide open icon when menu is open */
-  }
-
-  #responsivemenuToggleButton.open.closeIcon {
-    display: block; /* Show close icon when menu is open */
-  }
-
-.navbar-links {
-    display: none; /* Hide navbar links by default on small screens */
-    width: 100%; /* Full width */
-    flex-direction: column;
-    align-items: center;
-    background-color: black; /* Background color for the menu */
-    padding: 1rem;
-    position: absolute;
-    top: 4rem; /* Adjust based on your design and button height */
-    left: 0;
-    right: 0;
-  }
-
-.navbar-links.open {
-    display: flex; /* Show navbar links when menu is open */
-  }
-
-.navbar-links a {
-    width: 90%; /* Give some left/right margin */
-    padding: 0.75rem; /* Adjust padding */
-    text-align: center;
-    border-radius: 10px; /* Adjust border radius */
-    border: 1px goldenrod inset;
-    margin: 0.5rem 0; /* Spacing between links */
-    color: white; /* Set link color */
-    text-decoration: none; /* Remove underlines */
-  }
-
-.navbar-links a.active {
-    background-color: goldenrod; /* Style for the active link */
-    color: black;
+    display: none; /* Hide toggle button on desktop */
   }
 }
 
+/* ===== Mobile Menu Open State ===== */
+body.menu-open .navbar-links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: #f8f8f8;
+  padding-top: 60px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
 
-/* end of nav toggle */
+body.menu-open #responsivemenuToggleButton .openIcon {
+  display: none;
+}
+
+body.menu-open #responsivemenuToggleButton .closeIcon {
+  display: block;
+}
+/* Responsive Styles */
+
+
+/* end of nav toggle end */
 
 
 
@@ -1704,9 +1673,31 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 }
 
 
+.games-container .buttons {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 70%;
+}
+
+.games-container button{
+  font-size: 12px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  color: #000;
+  padding: 3px 3px;
+  cursor: pointer;
+}
 
 
+.games-container button:hover{
+  color: var(--main-color);
+  background-color: yellow;
+}
   
+
 
 .games-container .card-container {
   width: 100%;
@@ -1930,6 +1921,30 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 }
 
 
+.softwares-container .buttons {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 70%;
+}
+
+.softwares-container button{
+  font-size: 12px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  color: #000;
+  padding: 3px 3px;
+  cursor: pointer;
+}
+
+
+.softwares-container button:hover{
+  color: var(--main-color);
+  background-color: yellow;
+}
+  
 
 
 
@@ -2678,9 +2693,24 @@ justify-content: space-evenly;
     font-size: 2rem;
   }
   
+
+
   .viewers {
-    font-size: 1.5rem;
+    font-size: .5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
   }
+  
+  
+  .viewers i {
+    font-size: 7px;
+  }
+  
+  .viewers p {
+    font-size: 5px;
+  }
+  
+
 
   
   .email-chat-container h4 {
@@ -3099,7 +3129,21 @@ font-size: 6px;
  align-items: center;
 }
 
+.games-container .buttons{
+  display:grid;
+  width: 50px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
+.games-container button{
+ font-size: 10px;
+  padding: 3px 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  background-color: blue;
+}
 
 .games-container .card-container{
   margin-top: 15px;
@@ -3180,6 +3224,23 @@ font-size: 6px;
  border-radius: 10px 0px;
  justify-content: center;
  align-items: center;
+}
+
+
+.softwares-container .buttons{
+  display:grid;
+  width: 50px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.softwares-container button{
+ font-size: 10px;
+  padding: 3px 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  background-color: blue;
 }
 
 
