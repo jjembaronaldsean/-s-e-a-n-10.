@@ -17,10 +17,10 @@
 
      
       <!-- <link rel="stylesheet"  type="text/css" href="styles.css"/> -->
-       <!-- <link rel="stylesheet" href="style.css"> -->
+     <!-- <link rel="stylesheet" href="style.css"> -->
        <link rel="stylesheet" href="css/style.css">
        <!--box icons-->
-       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
        <link rel="stylesheet" href="style.css">
@@ -63,40 +63,35 @@
 
                   
 
-                    <div class="bx bx-menu"  id="menu-icon"><span class="animate"  style="--i:2;"></span></div>
-                                 
-                       
-                    
-                    <!-- button.nav -->
-<!-- Button to toggle the menu -->
-<button aria-label="toggle menu" id="responsivemenuToggleButton">
-    <!-- Close Icon (visible when menu is open) -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="closeIcon">
-        <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-    </svg>
-    <!-- Open Icon (visible when menu is closed) -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="openIcon">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-    </svg>
-</button>
 
-<!-- Navigation Menu -->
-<nav class="navbar">
-    <div class="navbar-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#games">Games</a>
-        <a href="#softwares">Softwares</a>
-        <a href="#tools">ToolBOX</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
-                        
-                        <!-- <span class="active-nav"></span>
-                        <span class="animate"  style="--i:2;"></span> -->
-                       </div> 
-                </nav>   
+
+
+
+
+         
+        
+                    <!-- <div class="bx bx-menu"  id="menu-icon"><span class="animate"  style="--i:2;"></span></div> -->
+
+<!-- nav start -->
+                 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+
+                  <div class="topnav" id="myTopnav">
+                        <a href="#home" class="active">Home</a>
+                           <a href="#projects">Projects</a>
+                            <a href="#games">Games</a>
+                              <a href="#softwares">Softwares</a>
+                               <a href="#tools">ToolBOX</a>
+                             <a href="#about">About</a>
+                          <a href="#contact">Contact</a>
+                       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                     <i class="fa fa-bars"></i>
+                    </a>
+                    </div>
+
+<!-- nav end -->
+
+
+
                    </header>
                 
                   <!-- home section design-->
@@ -818,6 +813,7 @@
     
     <div class="games-container" >
         <h2>  SAMPLE OF PC GAMES  <span>password is (sean10.)</span></h2>
+       <div class="buttons"> <button id="#mobile">mobile games</button> <button id="#pc">pc games</button></div>
         <div class="card-container">
 
 
@@ -847,7 +843,7 @@
 
          <!-- start -->
 
-                   <div class="gamecard">
+                   <div class="gamecard" >
                         <h3>fifa 14</h3>
                        
                              <img src="/images/games/fifa 14.jpeg" alt="fifa 14  Image 1" >
@@ -866,7 +862,7 @@
 
          <!-- start -->
 
-                   <div class="gamecard">
+                   <div class="gamecard" >
                         <h3>nfs most wanted 2005</h3>
                        
                              <img src="/images/games/nfs most wanted 2005.jpeg" alt="nfs most wanted 2005 Image 1" >
@@ -1057,6 +1053,7 @@
     
     <div class="softwares-container" >
         <h2>  sample of pc softwares; <span>password is (sean10.)</span></h2>
+        <div class="buttons"> <button id="#mobile">mobile wares</button> <button id="#pc">pc wares</button></div>
         <div class="card-container">
 
 
@@ -2059,7 +2056,7 @@
        <div class="tools-container">
 
 
-        <!-- start -->
+        <!-- 
            <div class="image-box">
            <div id="senbono">
             <a href="https://www.sean10.com" onclick="showDetails('senbono')"><img src="/images/tool box/SDNWAY handheld thermal imaging cam .jpg" alt="" ></a>
@@ -2068,11 +2065,9 @@
             <h5 class="bx"> <i class='bx bxl-whatsapp'></i><i class='bx bx-phone-call' ></i><i class='bx bxl-telegram'></i><i class='bx bx-message-rounded-dots'></i></h5>
     </div>
        </div>
-          <!-- end -->
-
+          
   
 
-        <!-- start -->
            <div class="image-box">
            <div id="senbono">
             <a href="#" onclick="showDetails('senbono')"><img src="/images/tool box/1W-75W Outdoor Portable Electric Soldering Iron.jpg" alt="" ></a>
@@ -2081,13 +2076,13 @@
             <h5 class="bx"> <i class='bx bxl-whatsapp'></i><i class='bx bx-phone-call' ></i><i class='bx bxl-telegram'></i><i class='bx bx-message-rounded-dots'></i></h5>
     </div>
        </div>
-          <!-- end -->
+          
 
 
 
 
 
-        <!-- start -->
+       
            <div class="image-box">
            <div id="senbono">
             <a href="#" onclick="showDetails('senbono')"><img src="/images/tool box/SENBONO SMART WATCH.jpg" alt="" ></a>
@@ -2096,7 +2091,7 @@
             <h5 class="bx"> <i class='bx bxl-whatsapp'></i><i class='bx bx-phone-call' ></i><i class='bx bxl-telegram'></i><i class='bx bx-message-rounded-dots'></i></h5>
     </div>
        </div>
-          <!-- end -->
+           -->
 
 
 
@@ -2115,7 +2110,7 @@
                       <!--footer design-->
                       <footer class="footer">
                         <div class="footer-text">
-                            <P>copyright &copy; 2023-2025 by 💗JJEMBA RONALD <a href="https://sean10.com ">#s̸e̸a̸n̸ 10.</a>  &#128525;    |  All rights Resesrved. &#128151;</P>
+                            <P>copyright &copy; 2023-2025 by 💗#s̸e̸a̸n̸ 10. <a href="https://sean10.com ">#s̸e̸a̸n̸ 10.</a>  &#128525;    |  All rights Resesrved.  [managed by headles] &#128151;</P>
                         </div>
 
                         <div class="footer-iconTop">
