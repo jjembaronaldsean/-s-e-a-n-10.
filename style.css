@@ -356,14 +356,18 @@ body {
 /* ===== Mobile Menu Open State ===== */
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 768px) {
-  
-  .topnav {
-    margin-top: 100px;
-    margin-right: 22px;
-    background-color: #333;
-    border-radius: 0px 8px 0px 8px; 
-    width: fit-content;
-    padding:5px 5px;
+  .body{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+ 
+ 
+    .topnav {
+      margin-top: 80px;
+      margin-right: 19.5px;
+      /* background-color: #333; */
+      border-radius: 0px 8px 0px 8px;
+      padding: 5px;
   }
 
 
@@ -377,8 +381,6 @@ body {
   .topnav a {
     font-size: 11px;
     font-family: 'Courier New', Courier, monospace;
-    padding: 2px;
-    padding-right: 5px 5px;
     transition: transform 0.3s ease-in-out; /* This is where you define the animation duration */
   }
   
@@ -389,11 +391,14 @@ body {
   }
    
   .topnav a.active {
-   /*  */
+   color: var(--main-color);
+   background-color: #fff;
+   border-radius: 8px;
   }
 
   .topnav a.active:hover {
     color: green;
+    background-color: salmon;
   }
 }
 
@@ -527,7 +532,6 @@ section {
    font-weight: 600;
    font-family:'Courier New', Courier, monospace;
    line-height:  1.3;
-   font-size: 'poppins',sans-serif;
    opacity: 3px;
    text-shadow: -9px -2px grey;
    animation: shake 0.5s infinite;
@@ -2698,7 +2702,7 @@ justify-content: space-evenly;
 
   .viewers {
     font-size: .5rem;
-    margin-right: 10rem;
+    margin-right: 7rem;
     margin-top: 2rem;
   }
   
@@ -2914,7 +2918,7 @@ justify-content: space-evenly;
 
   .projects-container  .slot-container .projects-box h3 {
   font-size:12px;
-  font-family: 'Courier New', Courier, monospace;
+ 
 }
 
 
@@ -2925,35 +2929,30 @@ justify-content: space-evenly;
 .projects-container .slot-container {
   margin-top: 15px;
   overflow: hidden;
-  /* grid-template-columns: repeat(auto-fit, minmax(80px,1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
  
 }
 
 .projects-container .slot-container .projects-box {
-  height: 250px;
-  width: 50px;
-  padding: 5px 5px;
- 
+  height: 260px;
+  width: 190px;
+  padding: 10px;
 }
 
 
 /* Target the icon element */   /*i|bx*/
 .projects-container .slot-container .projects-box  .bx {
   /* Adjust properties as needed */
-  font-size: 2em;  /* Example: Set the font size (adjust as needed) */
-  margin-top: 5px;
-}
-.projects-container .slot-container .projects-box  p {
-  /* Adjust properties as needed */
-  font-size:10px;  /* Example: Set the font size (adjust as needed) */
+  font-size: 3em;  /* Example: Set the font size (adjust as needed) */
+  margin-top: -2px;
 }
 
 
 
 /* img */
-.projects-container .slot-container .projects-box  img  {
-  width:33%;
-  height: 100px;
+.projects-container .slot-container .projects-box img {
+  width: 80%;
+  height: 120px;
   margin-top: 5px;
 }
 
@@ -2962,8 +2961,9 @@ justify-content: space-evenly;
 
 /* vdeo */
 .projects-container .slot-container .projects-box  video  {
-  width:45%;
+  width: 80%;
   height: 100px;
+  margin-top: 5px;
 }
 
 
@@ -2977,17 +2977,20 @@ justify-content: space-evenly;
     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
     white-space: nowrap; /* Prevents text from wrapping to the next line*/
   font-size: 10px;
+  padding: 10px;
+  margin-bottom: 7px;
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 10px;
+  font-size: 12px;
   color: #000;
+  text-shadow: none;
+  border: groove;
 }
 
 .projects-container .slot-container .projects-box a {
-   font-family: 'poppins',sans-serif;
-  font-size: 10px;
+  font-size: 12px;
  
 }
 
@@ -3294,7 +3297,7 @@ font-size: 6px;
 /* submit btn */
 .btn-box {
   justify-self: center;
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
   font-size: 10px;
   width: fit-content;
 }
