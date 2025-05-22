@@ -363,7 +363,7 @@ body {
  
  
     .topnav {
-      margin-top: 80px;
+      margin-top: 12em;
       margin-right: 19.5px;
       /* background-color: #333; */
       border-radius: 0px 8px 0px 8px;
@@ -378,6 +378,8 @@ body {
 
 
 
+
+
   .topnav a {
     font-size: 11px;
     font-family: 'Courier New', Courier, monospace;
@@ -389,6 +391,10 @@ body {
     color: #006aff;
     transform: scale(1.1); /* Scales the element to 110% of its original size */
   }
+  
+
+  
+
    
   .topnav a.active {
    color: var(--main-color);
@@ -399,7 +405,12 @@ body {
   .topnav a.active:hover {
     color: green;
     background-color: salmon;
+    border: groove;
+    
   }
+
+
+
 }
 
 
