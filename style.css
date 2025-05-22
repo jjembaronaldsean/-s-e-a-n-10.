@@ -412,16 +412,6 @@ body {
 }
 
 
-/* Responsive Styles */
-
-
-/* end of nav toggle end */
-
-
-
-
-
-
 
 
 
@@ -1711,6 +1701,12 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   background-color: yellow;
 }
   
+/* hidden  cards that don't match the selected category.   START*/
+.gamecard.hidden {
+  display: none;
+}
+/* hidden  cards that don't match the selected category.   END*/
+
 
 
 .games-container .card-container {
@@ -1960,6 +1956,11 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 }
   
 
+/* hidden  cards that don't match the selected category.   START*/
+.softwarescard.hidden {
+  display: none;
+}
+/* hidden  cards that don't match the selected category.   END*/
 
 
   
