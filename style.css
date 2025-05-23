@@ -364,7 +364,7 @@ body {
  
     .topnav {
       margin-top: 12em;
-      margin-right: 20px;
+      margin-right: 1.9em;
       /* background-color: #333; */
       border-radius: 0px 8px 0px 8px;
       padding: 5px;
@@ -2712,7 +2712,7 @@ justify-content: space-evenly;
 
   .viewers {
     font-size: .5rem;
-    margin-right: 7rem;
+    margin-right: 2rem;
     margin-top: 2rem;
   }
   
