@@ -3007,6 +3007,7 @@ justify-content: space-evenly;
 
 /* read-more */
 .read_more-container {
+  font-family: 'Courier New', Courier, monospace;
 /*  */
 }
 
@@ -3030,6 +3031,7 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 /* limit number of words 👍👍*/
+font-family: 'Courier New', Courier, monospace;
 
 }
 
@@ -3093,6 +3095,7 @@ overflow: hidden;
 overflow: hidden;
 padding: 5px 5px;
 font-size: 7px;
+font-family: 'poppins',sans-serif;
 }
 
 .read_more-container .read_more-box .img-box span a  {
