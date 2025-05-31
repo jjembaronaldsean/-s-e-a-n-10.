@@ -1178,7 +1178,7 @@ section {
 .projects-container  .slot-container .projects-box a:hover{
   color: #fff;
   transform: scale(1.5);
-  background: black;
+  background: blue;
   width: 160px;
   text-transform: capitalize;
 }
@@ -1567,6 +1567,12 @@ word-break: break-all;
   height: fit-content;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Optional: Add a smooth transition*/
+}
+
+
+.read_more-container .read_more-box .img-box  article p:hover {
+  transform: scale(1.1); /*Example: Zoom in*/
 }
 
   /* ans */
@@ -3031,7 +3037,8 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 /* limit number of words 👍👍*/
-font-family: 'Courier New', Courier, monospace;
+font-family: cursive;
+font-weight:bolder;
 
 }
 
@@ -3095,7 +3102,7 @@ overflow: hidden;
 overflow: hidden;
 padding: 5px 5px;
 font-size: 7px;
-font-family: 'poppins',sans-serif;
+font-family:monospace;
 }
 
 .read_more-container .read_more-box .img-box span a  {
