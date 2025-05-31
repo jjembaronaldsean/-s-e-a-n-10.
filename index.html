@@ -815,6 +815,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const mobileBtn = document.getElementById('mobile-btn');
             const pcBtn = document.getElementById('pc-btn');
+            const patchesBtn = document.getElementById('patches-btn');
             const allBtn = document.getElementById('all-btn');
             const gameCards = document.querySelectorAll('.gamecard');
 
@@ -844,6 +845,12 @@
                 });
             }
 
+            if (patchesBtn) { // Check if element exists before adding listener
+              patchesBtn.addEventListener('click', () => {
+                    filterGames('patches');
+                });
+            }
+
             if (allBtn) { // Check if element exists before adding listener
                 allBtn.addEventListener('click', () => {
                     filterGames('all');
@@ -862,6 +869,7 @@
         <div class="buttons">
           <button id="mobile-btn">Mobile Games</button>
           <button id="pc-btn">PC Games</button>
+          <button id="patches-btn">PC Games' patches</button>
           <button id="all-btn">All Games</button> </div>
         <div class="card-container">
 
@@ -886,6 +894,55 @@
                    
 
 
+<!-- START OF patches -->
+          
+
+         <!-- start  patch-->
+
+                   <div class="gamecard"  data-category="patches">
+                        <h3>PATCH 2017- 2021 V3</h3>
+                              <img src="/images/games/PES 2017 HANO MINI PATCH 2021 V3.jpg" alt="PES 2017 HANO MINI PATCH 2021 V3" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" >   -->
+                            <p><span>4 files</span>  4.10 GB </p>
+                            <a href="https://get.massive.io/01JWKNGFXH0Q3KRRB9WDAMBHE5?secret=hVldYeKnNdiEPbNe" class="batton">DOWNLOAD </a> 
+                     </div>
+                   
+
+                  <!-- end -->
+                   
+
+         <!-- start  patch-->
+
+                   <div class="gamecard"  data-category="patches">
+                        <h3>FIFA 14 - 2020  Patch</h3>
+                              <img src="/images/games/FIFA 14 Season Patch 2020.part01.jpg" alt="FIFA 14 Season Patch 2020.part01" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" >   -->
+                            <p><span>3 files</span> 3 Files | 3.5 GB </p>
+                            <a href="hhttps://get.massive.io/01JWKS11SQTM6SBBWJZJV11PH2?secret=YIxxnBLwpoXJisGM" class="batton">DOWNLOAD </a> 
+                     </div>
+                   
+
+                  <!-- end -->
+                   
+
+         <!-- start  patch-->
+
+                   <div class="gamecard"  data-category="patches">
+                        <h3>smoke patch 2017 -2021</h3>
+                              <img src="/images/games/smoke patch pes 2017  -2021.jpg" alt="smoke patch pes 2017  -2021" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" >   -->
+                            <p><span>2 files</span> | 1.3 GB</p>
+                            <a href="https://get.massive.io/01JWKRTMN7TBH523ZD136WX82P?secret=GfmiBLdlWMifRhid" class="batton">DOWNLOAD </a> 
+                     </div>
+                   
+
+                  <!-- end -->
+                   
+
+<!-- END OF patches -->
 
 
 
@@ -1064,6 +1121,26 @@
 
          <!-- start -->
 
+                   <div class="gamecard"  data-category="mobile">
+                        <h3>russian droughts</h3>
+                             <img src="/images/games/russian droughts-checkers.jpg" alt="russian droughts -checkers" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
+                            <p><span>1 files</span>  16.85 MB </p>
+                     <a href="https://get.massive.io/01JWKNT8EHSWXGW1H205ZDM52Q?secret=FMwKXlPYNtdFvNxZ" class="batton">DOWNLOAD </a> 
+                     </div>
+                    
+
+                  <!-- end -->
+                   
+                   
+
+
+
+
+
+         <!-- start -->
+
                    <div class="gamecard" data-category="pc">
                         <h3>pes 2011</h3>
                              <img src="/images/games/pes 2011.jpeg" alt="pes 2011 Image 1" >
@@ -1083,7 +1160,7 @@
 
                    <div class="gamecard" data-category="mobile">
                         <h3>dream-league-2019</h3>
-                             <img src="/images/games/dream-league-soccer-mod_6.14-apkmodking 2019..jpg" alt="dream-league-soccer-mod_2019" >
+                             <img src="/images/games/dream league 19.jpg" alt="dream-league-soccer-mod_2019" >
                                <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
                             <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
                             <p><span>1 files</span>353.62 MB</p>
@@ -1102,7 +1179,7 @@
 
                    <div class="gamecard" data-category="mobile">
                         <h3>gta san andreas</h3>
-                             <img src="/images/games/gta san andreas. mobile.jpg" alt="gta san andreas" >
+                             <img src="/images/games/gta san andreas -mobile.jpg" alt="gta san andreas" >
                                <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
                             <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
                             <p><span>1 files</span>  1.65gb </p>
@@ -1121,7 +1198,7 @@
 
                    <div class="gamecard" data-category="mobile">
                         <h3>dream-league-2023</h3>
-                             <img src="/images/games/dream-league-soccer-mod_2023.jpg" alt="dream-league-soccer-mod_2023" >
+                             <img src="/images/games/dream league 23.jpg" alt="dream-league-soccer-mod_2023" >
                                <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
                             <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
                             <p><span>1 files</span> 365.61 MB </p>
@@ -1189,7 +1266,8 @@
     
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const mobileBtn = document.getElementById('mobile-softwares-btn');
+        const mobilewaresBtn = document.getElementById('mobile-wares-btn');
+        const mobileAPKsBtn = document.getElementById('mobile-APKs-btn');
         const pcBtn = document.getElementById('pc-softwares-btn');
         const allBtn = document.getElementById('all-softwares-btn');
         const softwaresCards = document.querySelectorAll('.softwarescard');
@@ -1208,9 +1286,15 @@
         }
 
         // Event Listeners for the buttons
-        if (mobileBtn) { // Check if element exists before adding listener
-            mobileBtn.addEventListener('click', () => {
-                filterSoftwares('mobile');
+        if (mobilewaresBtn) { // Check if element exists before adding listener
+          mobilewaresBtn.addEventListener('click', () => {
+                filterSoftwares('mobile-wares');
+            });
+        }
+
+        if (mobileAPKsBtn) { // Check if element exists before adding listener
+          mobileAPKsBtn.addEventListener('click', () => {
+                filterSoftwares('mobile-APKs');
             });
         }
 
@@ -1236,17 +1320,18 @@
     <div class="softwares-container" >
         <h2>  sample of pc softwares; <span>password is (sean10.)</span></h2>
         <div class="buttons">
-          <button id="mobile-softwares-btn">mobile softwares</button>
+          <button id="mobile-wares-btn">mobile softwares </button>
+          <button id="mobile-APKs-btn"> APKs</button>
           <button id="pc-softwares-btn">pc softwares</button>
           <button id="all-softwares-btn">All softwares</button> </div>
         <div class="card-container">
 
 
-
+<!-- START OF APKS -->
         
          <!-- start -->
 
-                   <div class="softwarescard" data-category="mobile">
+                   <div class="softwarescard" data-category="mobile-APKs">
                         <h3 id="limit">GBWhatsApp</h3>
                        
                              <img src="/images/softwares/GBWhatsAppp.png" alt="GBWhatsApp_2.25.2.190_gw_04_18_1951_sec_sign" >
@@ -1258,7 +1343,48 @@
                      </div>
 
                   <!-- end -->
+
+<!-- END OF APKS -->
+
+
                    
+
+
+
+
+<!-- START OF MOBILE SOFTWARES -->
+        
+         <!-- start -->
+
+                   <div class="softwarescard" data-category="mobile-wares">
+                        <h3 id="limit">3uTools_v3.01-x86</h3>
+                       
+                             <img src="/images/softwares/3uTools.jpg" alt="3uTools_v3.01_Setup_x86" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
+                            <p> 1 File | 202.08 MB</p>
+                     <a href="https://get.massive.io/01JWKQECGM8Y7A4C2BRKN3CRGM?secret=OdbGmWrmHGdXzPMh" class="batton">DOWNLOAD</a> 
+                     <!-- <a href="https://get.massive.io/01JNTVCDQWX9WTKF6RVMJGH4W0?secret=UnXEEtYzCBpkvfxg" class="batton">DOWNLOAD part4</a>  -->
+                     </div>
+
+                  <!-- end -->
+        
+         <!-- start -->
+
+                   <div class="softwarescard" data-category="mobile-wares">
+                        <h3 id="limit">iTunes 12.10.11</h3>
+                       
+                             <img src="/images/softwares/iTunes.jpg" alt="iTunes 12.10.11 for Windows (Windows 64 bit)" >
+                               <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
+                            <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
+                            <p> 1 File | 191.69 MB</p>
+                     <a href="https://get.massive.io/01JWKR1AV0ZFZQBVF3BRZ4C6SQ?secret=ZtmpZYsrzmSoZGqy" class="batton">DOWNLOAD</a> 
+                     <!-- <a href="https://get.massive.io/01JNTVCDQWX9WTKF6RVMJGH4W0?secret=UnXEEtYzCBpkvfxg" class="batton">DOWNLOAD part4</a>  -->
+                     </div>
+
+                  <!-- end -->
+
+   <!--END OF MOBILE SOFTWARES  -->
 
 
 
@@ -2247,7 +2373,7 @@
        <div class="softwarescard" data-category="pc">
             <h3>WINDOWS10-PRO_ altum</h3>
            
-                 <img src="/images/softwares/WINDOWS10-PRO_ altum.jpg" alt="WINDOWS10-PRO_ altum" >
+                 <img src="/images/softwares/windows10 altum.jpg" alt="WINDOWS10-PRO_ altum" >
                    <!-- <img src="/images/20.1.jpg" alt="Euro 2016 Image 2" >
                 <img src="/images/about.erase.jpg" alt="Euro 2016 Image 3" > -->
                 <p> 1 File | 3.41 GB</p>
