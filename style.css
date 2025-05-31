@@ -3037,9 +3037,8 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 /* limit number of words 👍👍*/
-font-family: cursive;
-font-weight:bolder;
-
+font-family: 'poppins', sans-serif;
+font-weight:600;
 }
 
 
