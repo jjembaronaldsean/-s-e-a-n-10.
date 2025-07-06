@@ -208,7 +208,19 @@ body {
   
 
   .email-chat-box a {
-    background-color:orange ;
+    /* background-color:orange ; */
+
+    
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
     text-transform: lowercase;
     /* align-items: center; */
     /* justify-content: center; */
@@ -302,140 +314,126 @@ body {
 }
 
 /* END VIEWERS */
-/* Navbar Styles */
-.navbar {
-  position: relative;
-  right: 1em;
+
+
+
+
+
+
+
+
+
+
+/* Navbar Styles  start*/
+/* ===== Base Styles ===== */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
   overflow: hidden;
-  width: 50%;
 }
 
-.navbar-links a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 500;
-  margin-left: 2rem;
-  transition: 0.3s;
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  
 }
 
-.navbar-links a:hover,
-.navbar-links a.active {
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
   color: var(--main-color);
+  border-radius: 8px 0px 8px 0px;
 }
 
-/* Responsive Menu Toggle Button */
-#responsivemenuToggleButton {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  display: none; /* Hidden by default */
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1000; /* Ensure it's above other elements */
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--main-color);
+  color: white;
 }
 
-#responsivemenuToggleButton svg {
-  height: 1.5em;
-  width: 1.5em;
-  color: #fff;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
 
-#responsivemenuToggleButton .openIcon {
-  display: block; /* Open icon visible by default */
-}
 
-#responsivemenuToggleButton .closeIcon {
-  display: none; /* Close icon hidden by default */
-}
 
-#responsivemenuToggleButton.open .openIcon {
-  display: none; /* Hide open icon when menu is open */
-}
 
-#responsivemenuToggleButton.open .closeIcon {
-  display: block; /* Show close icon when menu is open */
-}
-
-/* Responsive Styles */
+/* ===== Mobile Menu Open State ===== */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 768px) {
-  #responsivemenuToggleButton {
-    display: block; /* Show toggle button on small screens */
-    position: absolute; /* Position it for better control */
-    top: 1rem; /* Adjust top spacing as needed */
-    right: 1rem; /* Adjust right spacing as needed */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem; /* Add some padding for touch */
-    z-index: 10; /* Ensure it's above the menu */
+  .body{
+    font-family: 'Courier New', Courier, monospace;
   }
 
-  #responsivemenuToggleButton.closeIcon {
-    display: none; /* Initially hide the close icon */
-    width: 24px;
-    height: 24px;
-    stroke: currentColor; /* Inherit stroke color */
+ 
+ 
+    .topnav {
+      margin-top: 12em;
+      margin-right: 1.9em;
+      /* background-color: #333; */
+      border-radius: 0px 8px 0px 8px;
+      padding: 5px;
+
+      
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
   }
 
-  #responsivemenuToggleButton.openIcon {
-    display: block; /* Initially show the open icon */
-    width: 24px;
-    height: 24px;
-    stroke: currentColor; /* Inherit stroke color */
+
+  .topnav:hover {
+    border: ridge;
+    background-color: #000;
   }
 
-  #responsivemenuToggleButton.open.openIcon {
-    display: none; /* Hide open icon when menu is open */
+
+
+  .topnav a {
+    font-size: 11px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: transform 0.3s ease-in-out; /* This is where you define the animation duration */
+  }
+  
+
+  .topnav a:hover {
+    color: #006aff;
+    transform: scale(1.1); /* Scales the element to 110% of its original size */
+  }
+  
+
+  
+
+   
+  .topnav a.active {
+   color: var(--main-color);
+   background-color: #fff;
+   border-radius: 8px;
   }
 
-  #responsivemenuToggleButton.open.closeIcon {
-    display: block; /* Show close icon when menu is open */
+  .topnav a.active:hover {
+    color: green;
+    background-color: salmon;
+    border: groove;
+    
   }
 
-.navbar-links {
-    display: none; /* Hide navbar links by default on small screens */
-    width: 100%; /* Full width */
-    flex-direction: column;
-    align-items: center;
-    background-color: black; /* Background color for the menu */
-    padding: 1rem;
-    position: absolute;
-    top: 4rem; /* Adjust based on your design and button height */
-    left: 0;
-    right: 0;
-  }
 
-.navbar-links.open {
-    display: flex; /* Show navbar links when menu is open */
-  }
 
-.navbar-links a {
-    width: 90%; /* Give some left/right margin */
-    padding: 0.75rem; /* Adjust padding */
-    text-align: center;
-    border-radius: 10px; /* Adjust border radius */
-    border: 1px goldenrod inset;
-    margin: 0.5rem 0; /* Spacing between links */
-    color: white; /* Set link color */
-    text-decoration: none; /* Remove underlines */
-  }
-
-.navbar-links a.active {
-    background-color: goldenrod; /* Style for the active link */
-    color: black;
-  }
 }
-
-
-/* end of nav toggle */
-
-
-
-
 
 
 
@@ -557,7 +555,6 @@ section {
    font-weight: 600;
    font-family:'Courier New', Courier, monospace;
    line-height:  1.3;
-   font-size: 'poppins',sans-serif;
    opacity: 3px;
    text-shadow: -9px -2px grey;
    animation: shake 0.5s infinite;
@@ -659,6 +656,7 @@ section {
    width: 90%;
    margin-left:19px;
    bottom:5px;
+   text-transform: uppercase;
 }
 
 .btn-box {
@@ -677,28 +675,37 @@ section {
 }
 
 .btn-box .btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16rem;
+    width: fit-content;
     height: 100%;
-     background: var(--main-color) goldenrod ;
+     /* background: var(--main-color) goldenrod ; */
     background-size: 96% 10px;
 
     /* background-color: blueviolet; */
     height: 4rem;
-    border: 2rem solid var(--main-color);
+    /* border: 2rem solid var(--main-color); */
     border-radius: .8rem;
     font-size: 25px;
     font-weight: 600;
     font-family: 'poppins',sans-serif;
     letter-spacing: .1rem;
     color: var(--bg-color) green;
+    padding: 3px;
     z-index: 1;
     /* overflow: hidden; */
     opacity: 1px;
     transition: .5s;
+
+    
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
    
 }
 
@@ -706,7 +713,7 @@ section {
 
 
 .btn-box .btn:hover {
-  background-color: #2980b9; /* Adjust hover background color */
+  background-color:goldenrod; /* Adjust hover background color */
   color: #fff;  /* Adjust hover text color */
   transform: scale(1.2); /* Scale icons slightly on hover */
 }
@@ -751,30 +758,36 @@ section {
 
 /*dOWNLOAD CV button*/
 
-.buton {  /* Targets elements with class "button" */
-  background-color: /* #3498db*/  rgb(52, 179, 42); /* Adjust background color as desired  */
- color: white;  /* Adjust text color as desired */
- padding: 15px 30px;  /* Adjust padding for button size */
- border: none;
- border-radius: 5px;  /* Add rounded corners */
- font-size: 16px;  /* Adjust font size */
- font-weight: bold;  /* Make text bold */
+.btn-box .download{  /* Targets elements with class "button" */
+  /* background-color: #3498db  rgb(52, 179, 42); Adjust background color as desired  */
+  background: #fff;
+ color: #000;  /* Adjust text color as desired */
+ padding: 5px;  /* Adjust padding for button size */
+ border:groove;
  /*text-transform: uppercase;   Convert text to uppercase */
  cursor: pointer;  /* Indicate clickable element */
- /* transition: all 0.3s ease-in-out;  Add smooth hover effect */
- width: 19rem;
- height: 4rem;
- position:relative;
- font-family: 'poppins',sans-serif;
-}
-
-.buton:hover {  /* Styles applied on button hover */
- background-color: /*#2980b9*/ rgba(158, 168, 23, 0.656);  /* Adjust hover background color */
- color: #fff;  /* Adjust hover text color */
- transform: scale(1.1); /* Scale icons slightly on hover */
+ width: fit-content;
+ font-size: 15px;
+ font-family: 'Courier New', Courier, monospace;
 }
 
 
+.btn-box .download:hover{
+  background-color: #000;
+  /* color: #fff; */
+  transform: scale(1.1);
+}
+
+.btn-box .download a{  /* Targets elements with class "button" */
+font-weight: bolder;
+  color: #000;
+}
+
+
+.btn-box .download a:hover{
+ color: #fff;
+ /* background: #000; */
+}
 
 
 
@@ -806,14 +819,14 @@ section {
 }
 
 .p p{
-  color: blue;
-  background-color: #fff;
-  opacity: .5;
+  color: yellow;
+  /* background-color: #fff; */
+  /* opacity: .5; */
   gap: 10px;
   width: 40rem;
   /* border: red 1px solid; */
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: cursive;
   /* padding: 5px 10px; */
   /* margin-right: 10px;
@@ -824,6 +837,19 @@ section {
   text-shadow: 2px 4px grey;
   display: inline-flex;
   align-items: center;
+
+  
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -912,6 +938,8 @@ section {
 
  .projects-container{
   width: 100%;
+  /* display: flex;
+  flex-wrap: wrap; */
   align-items: center;
   justify-items: center;
   font-family: 'poppins',sans-serif;
@@ -930,6 +958,7 @@ section {
  padding: 5px 5px;
   font-size: 5em;
   width: fit-content;
+  border-radius: 8px;
   background: black;
   /* border: #007bff solid 2px; */
   font-family: 'Courier New', Courier, monospace;
@@ -940,6 +969,7 @@ section {
     overflow: hidden; /* Ensures content is clipped */
     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+
 }
 
 
@@ -958,8 +988,8 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 15px;
-  /* overflow: hidden; */
-  overflow: visible; /* Or remove this line entirely */ 
+  overflow: hidden;
+  /* overflow: visible; Or remove this line entirely  */
   /* border: #007bff solid 2px; */
   cursor: auto;
   
@@ -967,23 +997,33 @@ section {
 
 
 .projects-container .slot-container .projects-box {
-  /* flex: 1 1 30rem; */
-  background:#333;
+  /* flex:  33rem; */
+  /* background:#333; */
   border-radius: 2rem;
-  padding: 3rem 2rem 4rem;
+  padding: 1rem 2rem 4rem;
   text-align: center;
   /* border: .2rem #fff; */
   /* transition: .5s ease; */
   /* cursor: pointer; */
-  height: 500px;
-  width: 400px;
-  /* overflow: hidden; */
+  height: 420px;
+  width: 350px;
   overflow: visible; /* Or remove this line entirely */ 
   /* border: #007bff solid 2px; */
    /* ... other styles ... */
    transition: border 0.4s ease-in-out; /* Add transition for border */
    position: relative;
   /* margin: auto; */
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -1206,7 +1246,7 @@ section {
 .projects-container  .slot-container .projects-box a:hover{
   color: #fff;
   transform: scale(1.5);
-  background: black;
+  background: blue;
   width: 160px;
   text-transform: capitalize;
 }
@@ -1420,6 +1460,8 @@ button{
   font-weight: 600;
   margin-top: 5px;
 
+  
+
 }
 
 
@@ -1595,6 +1637,12 @@ word-break: break-all;
   height: fit-content;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Optional: Add a smooth transition*/
+}
+
+
+.read_more-container .read_more-box .img-box  article p:hover {
+  transform: scale(1.1); /*Example: Zoom in*/
 }
 
   /* ans */
@@ -1645,6 +1693,32 @@ word-break: break-all;
 
 /* START OF GAMES */
 
+  /* Ensure the container takes up the full viewport */
+.video-container {
+  /* position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; */
+}
+
+/* Style the video to cover the entire background */
+.background-video {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto; */
+  /* z-index: -1; Send the video behind the content */
+  /* object-fit:fill; Ensures the video covers the area */
+}
+
+/* Style the content on top of the video */
+
+
+
 .games-container{
   width: 100%;
   align-items: center;
@@ -1655,7 +1729,12 @@ word-break: break-all;
   background: #000;
   padding: 20px 20px;
   font-family: 'Courier New', Courier, monospace;
+
 }
+
+
+
+
 
 
 
@@ -1705,9 +1784,49 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 }
 
 
+.games-container .buttons {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 70%;
+}
 
+.games-container button{
+  font-size: 12px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 3px;
+  cursor: pointer;
 
   
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
+}
+
+
+.games-container button:hover{
+  color: var(--main-color);
+  background-color: yellow;
+}
+  
+/* hidden  cards that don't match the selected category.   START*/
+.gamecard.hidden {
+  display: none;
+}
+/* hidden  cards that don't match the selected category.   END*/
+
+
 
 .games-container .card-container {
   width: 100%;
@@ -1720,8 +1839,10 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   padding: 15px 15px;
    border-radius: 10px;
    border: 1px black inset;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
-  overflow: hidden;
+  /* background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8)); */
+  background:radial-gradient( red,goldenrod, blue);
+    overflow: hidden;
+    /* z-index: 1; */
 }
 
 
@@ -1766,10 +1887,24 @@ font-size: 12px;
  border: grey 1px inset;
  border-radius: 10px;
  padding: 15px 15px;
- background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43));
+ /* background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43)); */
  /* background-image: conic-gradient( #95d2c3, #fff); */
  /* justify-content: space-between; */
  overflow: hidden;
+ 
+ 
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
+
+   
 }
 
 
@@ -1931,7 +2066,47 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
 }
 
 
+.softwares-container .buttons {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 8px;
+  width: 70%;
+}
 
+.softwares-container button{
+  font-size: 12px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 3px;
+  cursor: pointer;
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
+}
+
+
+.softwares-container button:hover{
+  color: var(--main-color);
+  background-color: yellow;
+}
+  
+
+/* hidden  cards that don't match the selected category.   START*/
+.softwarescard.hidden {
+  display: none;
+}
+/* hidden  cards that don't match the selected category.   END*/
 
 
   
@@ -1947,7 +2122,8 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   padding: 15px 15px;
    border-radius: 10px;
    border: 1px black inset;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  /* background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8)); */
+  background:radial-gradient( rgb(206, 226, 175),rgb(177, 133, 22), rgb(41, 41, 189));
 }
 
 
@@ -1990,14 +2166,27 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
  text-align: center;
  width: 200px;
  height: 250px;
- border: grey 1px inset;
+ /* border: grey 1px inset; */
  border-radius: 10px;
  padding: 15px 15px;
  /* background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43)); */
  /* background-image: conic-gradient( #95d2c3, #fff); */
- background-color: #fff;
+ /* background-color: #fff; */
  /* justify-content: space-between; */
  overflow: hidden;
+
+
+ 
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -2352,6 +2541,7 @@ justify-content: space-evenly;
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
+    
 
 }
 
@@ -2679,9 +2869,24 @@ justify-content: space-evenly;
     font-size: 2rem;
   }
   
+
+
   .viewers {
-    font-size: 1.5rem;
+    font-size: .5rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
   }
+  
+  
+  .viewers i {
+    font-size: 7px;
+  }
+  
+  .viewers p {
+    font-size: 5px;
+  }
+  
+
 
   
   .email-chat-container h4 {
@@ -2801,7 +3006,7 @@ justify-content: space-evenly;
   .home-content span {
     font-size: 1em;
   }
-  .btn-box ,.buton {
+  .btn-box  {
     /* border: 1px red solid; */
     position: relative;
     width: 15em;
@@ -2814,28 +3019,22 @@ justify-content: space-evenly;
 
   .btn-box .btn {
     border: 1px solid #ddd;
-    font-size: 5px;
+    font-size: 10px;
     left: 4px;
     margin-right: 4px;
     /* width: fit-content; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    width: 40px;
-    background: #000;
+    height: 15px;
+    width:fit-content;
+    /* background: #000; */
   }
 
- .btn-box .buton {
-  border: 1px solid #ddd;
-  font-size: 5px;
-  /* width: fit-content; */
-  /* padding: 3px 4px; Adjust padding as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 30px;
+  .btn-box .download {
+  /* border: 1px solid #ddd; */
+  font-size: 6px;
+  width: fit-content;
  }
 
 
@@ -2849,9 +3048,9 @@ justify-content: space-evenly;
 
   .p p {
     /* border: red 1px solid; */
-    font-size:1rem;
+    font-size:5px;
     width: 14rem;
-    opacity: 0.7;
+    /* opacity: 0.7; */
    gap: 4px;
    margin-left:0px;
    /* color: #000; */
@@ -2884,7 +3083,7 @@ justify-content: space-evenly;
 
   .projects-container  .slot-container .projects-box h3 {
   font-size:12px;
-  font-family: 'Courier New', Courier, monospace;
+ 
 }
 
 
@@ -2895,35 +3094,30 @@ justify-content: space-evenly;
 .projects-container .slot-container {
   margin-top: 15px;
   overflow: hidden;
-  grid-template-columns: repeat(auto-fit, minmax(80px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
  
 }
 
 .projects-container .slot-container .projects-box {
-  height: 250px;
-  width: 50px;
-  padding: 5px 5px;
- 
+  height: 260px;
+  width: 190px;
+  padding: 10px;
 }
 
 
 /* Target the icon element */   /*i|bx*/
 .projects-container .slot-container .projects-box  .bx {
   /* Adjust properties as needed */
-  font-size: 2em;  /* Example: Set the font size (adjust as needed) */
-  margin-top: 5px;
-}
-.projects-container .slot-container .projects-box  p {
-  /* Adjust properties as needed */
-  font-size:10px;  /* Example: Set the font size (adjust as needed) */
+  font-size: 3em;  /* Example: Set the font size (adjust as needed) */
+  margin-top: -2px;
 }
 
 
 
 /* img */
-.projects-container .slot-container .projects-box  img  {
-  width:33%;
-  height: 100px;
+.projects-container .slot-container .projects-box img {
+  width: 80%;
+  height: 120px;
   margin-top: 5px;
 }
 
@@ -2932,8 +3126,9 @@ justify-content: space-evenly;
 
 /* vdeo */
 .projects-container .slot-container .projects-box  video  {
-  width:45%;
+  width: 80%;
   height: 100px;
+  margin-top: 5px;
 }
 
 
@@ -2947,23 +3142,27 @@ justify-content: space-evenly;
     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
     white-space: nowrap; /* Prevents text from wrapping to the next line*/
   font-size: 10px;
+  padding: 10px;
+  margin-bottom: 7px;
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 10px;
+  font-size: 12px;
   color: #000;
+  text-shadow: none;
+  border: groove;
 }
 
 .projects-container .slot-container .projects-box a {
-   font-family: 'poppins',sans-serif;
-  font-size: 10px;
+  font-size: 12px;
  
 }
 
 
 /* read-more */
 .read_more-container {
+  font-family: 'Courier New', Courier, monospace;
 /*  */
 }
 
@@ -2987,7 +3186,8 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 /* limit number of words 👍👍*/
-
+font-family: 'poppins', sans-serif;
+font-weight:600;
 }
 
 
@@ -3050,6 +3250,7 @@ overflow: hidden;
 overflow: hidden;
 padding: 5px 5px;
 font-size: 7px;
+font-family:monospace;
 }
 
 .read_more-container .read_more-box .img-box span a  {
@@ -3100,7 +3301,21 @@ font-size: 6px;
  align-items: center;
 }
 
+.games-container .buttons{
+  display:grid;
+  width: 50px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
+.games-container button{
+ font-size: 10px;
+  padding: 3px 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  background-color: blue;
+}
 
 .games-container .card-container{
   margin-top: 15px;
@@ -3184,6 +3399,23 @@ font-size: 6px;
 }
 
 
+.softwares-container .buttons{
+  display:grid;
+  width: 50px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.softwares-container button{
+ font-size: 10px;
+  padding: 3px 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  background-color: blue;
+}
+
+
 
 .softwares-container .card-container{
   margin-top: 15px;
@@ -3233,6 +3465,9 @@ font-size: 6px;
 /* submit btn */
 .btn-box {
   justify-self: center;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 10px;
+  width: fit-content;
 }
 
 /*end of submit btn */
