@@ -208,7 +208,19 @@ body {
   
 
   .email-chat-box a {
-    background-color:orange ;
+    /* background-color:orange ; */
+
+    
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
     text-transform: lowercase;
     /* align-items: center; */
     /* justify-content: center; */
@@ -368,6 +380,18 @@ body {
       /* background-color: #333; */
       border-radius: 0px 8px 0px 8px;
       padding: 5px;
+
+      
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
   }
 
 
@@ -632,6 +656,7 @@ section {
    width: 90%;
    margin-left:19px;
    bottom:5px;
+   text-transform: uppercase;
 }
 
 .btn-box {
@@ -650,28 +675,37 @@ section {
 }
 
 .btn-box .btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 16rem;
+    width: fit-content;
     height: 100%;
-     background: var(--main-color) goldenrod ;
+     /* background: var(--main-color) goldenrod ; */
     background-size: 96% 10px;
 
     /* background-color: blueviolet; */
     height: 4rem;
-    border: 2rem solid var(--main-color);
+    /* border: 2rem solid var(--main-color); */
     border-radius: .8rem;
     font-size: 25px;
     font-weight: 600;
     font-family: 'poppins',sans-serif;
     letter-spacing: .1rem;
     color: var(--bg-color) green;
+    padding: 3px;
     z-index: 1;
     /* overflow: hidden; */
     opacity: 1px;
     transition: .5s;
+
+    
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
    
 }
 
@@ -679,7 +713,7 @@ section {
 
 
 .btn-box .btn:hover {
-  background-color: #2980b9; /* Adjust hover background color */
+  background-color:goldenrod; /* Adjust hover background color */
   color: #fff;  /* Adjust hover text color */
   transform: scale(1.2); /* Scale icons slightly on hover */
 }
@@ -724,30 +758,36 @@ section {
 
 /*dOWNLOAD CV button*/
 
-.buton {  /* Targets elements with class "button" */
-  background-color: /* #3498db*/  rgb(52, 179, 42); /* Adjust background color as desired  */
- color: white;  /* Adjust text color as desired */
- padding: 15px 30px;  /* Adjust padding for button size */
- border: none;
- border-radius: 5px;  /* Add rounded corners */
- font-size: 16px;  /* Adjust font size */
- font-weight: bold;  /* Make text bold */
+.btn-box .download{  /* Targets elements with class "button" */
+  /* background-color: #3498db  rgb(52, 179, 42); Adjust background color as desired  */
+  background: #fff;
+ color: #000;  /* Adjust text color as desired */
+ padding: 5px;  /* Adjust padding for button size */
+ border:groove;
  /*text-transform: uppercase;   Convert text to uppercase */
  cursor: pointer;  /* Indicate clickable element */
- /* transition: all 0.3s ease-in-out;  Add smooth hover effect */
- width: 19rem;
- height: 4rem;
- position:relative;
- font-family: 'poppins',sans-serif;
-}
-
-.buton:hover {  /* Styles applied on button hover */
- background-color: /*#2980b9*/ rgba(158, 168, 23, 0.656);  /* Adjust hover background color */
- color: #fff;  /* Adjust hover text color */
- transform: scale(1.1); /* Scale icons slightly on hover */
+ width: fit-content;
+ font-size: 15px;
+ font-family: 'Courier New', Courier, monospace;
 }
 
 
+.btn-box .download:hover{
+  background-color: #000;
+  /* color: #fff; */
+  transform: scale(1.1);
+}
+
+.btn-box .download a{  /* Targets elements with class "button" */
+font-weight: bolder;
+  color: #000;
+}
+
+
+.btn-box .download a:hover{
+ color: #fff;
+ /* background: #000; */
+}
 
 
 
@@ -779,14 +819,14 @@ section {
 }
 
 .p p{
-  color: blue;
-  background-color: #fff;
-  opacity: .5;
+  color: yellow;
+  /* background-color: #fff; */
+  /* opacity: .5; */
   gap: 10px;
   width: 40rem;
   /* border: red 1px solid; */
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: cursive;
   /* padding: 5px 10px; */
   /* margin-right: 10px;
@@ -797,6 +837,19 @@ section {
   text-shadow: 2px 4px grey;
   display: inline-flex;
   align-items: center;
+
+  
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -885,6 +938,8 @@ section {
 
  .projects-container{
   width: 100%;
+  /* display: flex;
+  flex-wrap: wrap; */
   align-items: center;
   justify-items: center;
   font-family: 'poppins',sans-serif;
@@ -903,6 +958,7 @@ section {
  padding: 5px 5px;
   font-size: 5em;
   width: fit-content;
+  border-radius: 8px;
   background: black;
   /* border: #007bff solid 2px; */
   font-family: 'Courier New', Courier, monospace;
@@ -913,6 +969,7 @@ section {
     overflow: hidden; /* Ensures content is clipped */
     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+
 }
 
 
@@ -931,8 +988,8 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 15px;
-  /* overflow: hidden; */
-  overflow: visible; /* Or remove this line entirely */ 
+  overflow: hidden;
+  /* overflow: visible; Or remove this line entirely  */
   /* border: #007bff solid 2px; */
   cursor: auto;
   
@@ -940,22 +997,33 @@ section {
 
 
 .projects-container .slot-container .projects-box {
-  flex:  33rem;
-  background:#333;
+  /* flex:  33rem; */
+  /* background:#333; */
   border-radius: 2rem;
-  padding: 3rem 2rem 4rem;
+  padding: 1rem 2rem 4rem;
   text-align: center;
   /* border: .2rem #fff; */
   /* transition: .5s ease; */
   /* cursor: pointer; */
-  height: 500px;
-  width: 500px;
+  height: 420px;
+  width: 350px;
   overflow: visible; /* Or remove this line entirely */ 
   /* border: #007bff solid 2px; */
    /* ... other styles ... */
    transition: border 0.4s ease-in-out; /* Add transition for border */
    position: relative;
   /* margin: auto; */
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -1392,6 +1460,8 @@ button{
   font-weight: 600;
   margin-top: 5px;
 
+  
+
 }
 
 
@@ -1623,6 +1693,32 @@ word-break: break-all;
 
 /* START OF GAMES */
 
+  /* Ensure the container takes up the full viewport */
+.video-container {
+  /* position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; */
+}
+
+/* Style the video to cover the entire background */
+.background-video {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto; */
+  /* z-index: -1; Send the video behind the content */
+  /* object-fit:fill; Ensures the video covers the area */
+}
+
+/* Style the content on top of the video */
+
+
+
 .games-container{
   width: 100%;
   align-items: center;
@@ -1633,7 +1729,12 @@ word-break: break-all;
   background: #000;
   padding: 20px 20px;
   font-family: 'Courier New', Courier, monospace;
+
 }
+
+
+
+
 
 
 
@@ -1696,9 +1797,21 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   font-size: 12px;
   font-family: 'poppins', sans-serif;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   padding: 3px 3px;
   cursor: pointer;
+
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -1726,8 +1839,10 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   padding: 15px 15px;
    border-radius: 10px;
    border: 1px black inset;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
-  overflow: hidden;
+  /* background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8)); */
+  background:radial-gradient( red,goldenrod, blue);
+    overflow: hidden;
+    /* z-index: 1; */
 }
 
 
@@ -1772,10 +1887,24 @@ font-size: 12px;
  border: grey 1px inset;
  border-radius: 10px;
  padding: 15px 15px;
- background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43));
+ /* background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43)); */
  /* background-image: conic-gradient( #95d2c3, #fff); */
  /* justify-content: space-between; */
  overflow: hidden;
+ 
+ 
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
+
+   
 }
 
 
@@ -1950,9 +2079,20 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   font-size: 12px;
   font-family: 'poppins', sans-serif;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   padding: 3px 3px;
   cursor: pointer;
+  
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -1982,7 +2122,8 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
   padding: 15px 15px;
    border-radius: 10px;
    border: 1px black inset;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
+  /* background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8)); */
+  background:radial-gradient( rgb(206, 226, 175),rgb(177, 133, 22), rgb(41, 41, 189));
 }
 
 
@@ -2025,14 +2166,27 @@ So, for the border-radius: 0px 10px 10px 0px; declaration: */
  text-align: center;
  width: 200px;
  height: 250px;
- border: grey 1px inset;
+ /* border: grey 1px inset; */
  border-radius: 10px;
  padding: 15px 15px;
  /* background:  linear-gradient(rgb(131, 121, 121),rgb(158, 126, 43)); */
  /* background-image: conic-gradient( #95d2c3, #fff); */
- background-color: #fff;
+ /* background-color: #fff; */
  /* justify-content: space-between; */
  overflow: hidden;
+
+
+ 
+  /* box-shadow: 10px 10px 5px 2px #f0c; */
+   /* start of sean glass */
+   background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+   /* border-radius: 10px; */
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+   /* padding: 20px; */
+   /* end of sean glass */
 }
 
 
@@ -2387,6 +2541,7 @@ justify-content: space-evenly;
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
+    
 
 }
 
@@ -2851,7 +3006,7 @@ justify-content: space-evenly;
   .home-content span {
     font-size: 1em;
   }
-  .btn-box ,.buton {
+  .btn-box  {
     /* border: 1px red solid; */
     position: relative;
     width: 15em;
@@ -2864,28 +3019,22 @@ justify-content: space-evenly;
 
   .btn-box .btn {
     border: 1px solid #ddd;
-    font-size: 5px;
+    font-size: 10px;
     left: 4px;
     margin-right: 4px;
     /* width: fit-content; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    width: 40px;
-    background: #000;
+    height: 15px;
+    width:fit-content;
+    /* background: #000; */
   }
 
- .btn-box .buton {
-  border: 1px solid #ddd;
-  font-size: 5px;
-  /* width: fit-content; */
-  /* padding: 3px 4px; Adjust padding as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 30px;
+  .btn-box .download {
+  /* border: 1px solid #ddd; */
+  font-size: 6px;
+  width: fit-content;
  }
 
 
@@ -2899,9 +3048,9 @@ justify-content: space-evenly;
 
   .p p {
     /* border: red 1px solid; */
-    font-size:1rem;
+    font-size:5px;
     width: 14rem;
-    opacity: 0.7;
+    /* opacity: 0.7; */
    gap: 4px;
    margin-left:0px;
    /* color: #000; */
