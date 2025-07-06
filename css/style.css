@@ -3025,16 +3025,17 @@ justify-content: space-evenly;
   /* border: 1px solid #ddd; */
   font-size: 7px;
   width: fit-content;
+  letter-spacing: 2px;
   /* border: red 1px solid; */
  
  }
 
 
   .home-sci {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
-    align-items: center;
+    align-items: center; */
     width: 15em;
     left: 15px;
     /* margin-top: 1rem; */
@@ -3301,7 +3302,8 @@ font-size: 6px;
 
 .games-container .buttons{
   display:grid;
-  width: 50px;
+  width: fit-content;
+  border-radius: 8px;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -3399,6 +3401,8 @@ font-size: 6px;
 
 .softwares-container .buttons{
   display:grid;
+  width: fit-content;
+  border-radius: 8px;
   width: 50px;
   gap: 10px;
   justify-content: center;
