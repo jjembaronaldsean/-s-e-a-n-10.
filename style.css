@@ -1014,6 +1014,7 @@ font-weight: bolder;
    position: relative;
   /* margin: auto; */
   
+  
   /* box-shadow: 10px 10px 5px 2px #f0c; */
    /* start of sean glass */
    background: rgba(255, 255, 255, 0.2);
@@ -2908,6 +2909,7 @@ justify-content: space-evenly;
     background-repeat: no-repeat;
     background-size: cover; /* Or contain, adjust as needed */
     /* background-attachment: fixed;  Consider removing for performance */
+    font-family: "poppins",sans-serif;
   }
 
 
@@ -3070,7 +3072,7 @@ justify-content: space-evenly;
 
   .projects-container{
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
   }
 
 .projects-container h2 {
