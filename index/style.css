@@ -1030,7 +1030,7 @@ font-weight: bolder;
 
 /* 
 /* border spin nimation */
-@property --angle {
+/* @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
@@ -1070,8 +1070,8 @@ font-weight: bolder;
   to {
     --angle: 360deg;
   }
-}
-
+} */
+/* END OF BORDER SPIN */
 
 
 
