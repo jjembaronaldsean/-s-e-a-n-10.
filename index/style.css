@@ -367,7 +367,7 @@ body {
 
 /* ===== Mobile Menu Open State ===== */
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .body{
     font-family: 'Courier New', Courier, monospace;
   }
@@ -406,6 +406,9 @@ body {
     font-size: 11px;
     font-family: 'Courier New', Courier, monospace;
     transition: transform 0.3s ease-in-out; /* This is where you define the animation duration */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
 
@@ -435,7 +438,7 @@ body {
 
 }
 
-
+/* end of @media */
 
 
 
@@ -2827,7 +2830,7 @@ justify-content: space-evenly;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   
   .header {
