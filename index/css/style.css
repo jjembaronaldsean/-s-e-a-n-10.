@@ -3045,10 +3045,10 @@ justify-content: space-evenly;
 
   .home-sci {
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    display: flex;
-    /* width:10rem; */
+    width:11rem;
     padding: 5px;
   }
 
