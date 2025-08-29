@@ -4667,47 +4667,32 @@ font-size: 10px;
 
 
 
-
 .games-container h2 {
-  width: fit-content;
-  font-size: 2em;
-  letter-spacing: 1px;
-  text-shadow: none;
-  color: #fff;
-  justify-content: space-evenly;
- align-items: center;
+  font-size: 2rem;
+  display: flex;
  }
      
 
-
-
 .games-container h2 span  {
- /* color: #000;
- margin-left: 0px;
- display: flex;
- flex-wrap: wrap;
- position: relative;
- border-radius: 10px 0px;
- justify-content: center;
- align-items: center; */
+  left: 4px;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .games-container .buttons{
-  justify-content: space-between;
-  align-items: center;
   display: flex;
-  margin-top: 10px;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .games-container button{
- font-size: 12px;
-  padding: 3px 7px;
+  font-size: 16px;
+  padding: 3px 3px;
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
-  margin: 5px;
-   background-color: blue;
-  
+  background-color: blue;
 }
 
 .games-container .card-container{
@@ -4765,48 +4750,35 @@ font-size: 10px;
 }
 
 
-
-
 .softwares-container h2 {
- width: fit-content;
- font-size: 2em;
- letter-spacing: 1px;
- text-shadow: none;
- color: #fff;
- justify-content: space-evenly;
-align-items: center;
+  font-size: 2rem;
+  display: flex;
  }
      
 
 
 
 .softwares-container h2 span  {
- /* color: #000;
- margin-left: 0px;
- display: flex;
- flex-wrap: wrap;
- position: relative;
- border-radius: 10px 0px;
- justify-content: center;
- align-items: center; */
+  left: 4px;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
 .softwares-container .buttons{
-  justify-content: space-between;
-  align-items: center;
   display: flex;
-  margin-top: 10px;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .softwares-container button{
-  font-size: 12px;
-  padding: 3px 7px;
+  font-size: 16px;
+  padding: 3px 3px;
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
-  margin: 5px;
-   background-color: blue;
+  background-color: blue;
 }
 
 
