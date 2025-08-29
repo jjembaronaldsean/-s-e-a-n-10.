@@ -2841,7 +2841,7 @@ justify-content: space-evenly;
 }
 
 
-
+/* START OF 600PX  */
 @media screen and (max-width: 600px) {
 
   
@@ -3489,7 +3489,8 @@ font-size: 6px;
 /* START OF 768PX */
 /* Styles for larger screens (Tablets and Desktops - as before) */
 
-/* @media screen and (max-width: 768px) {
+ 
+ @media screen and (min-width: 601px) and (max-width: 768px)  {
 
   
   .header {
@@ -3567,42 +3568,42 @@ font-size: 6px;
 
 
 
-   */
+   
 /* Navbar Styles  start*/
 /* ===== Base Styles ===== */
 /* Add a black background color to the top navigation */
-/* .topnav {
+ .topnav {
   
-} */
+} 
 
 /* Style the links inside the navigation bar */
-/* .topnav a {
+ .topnav a {
  
   font-size: 1em;
   
-} */
+} 
 
 /* Change the color of links on hover */
-/* .topnav a:hover {
+ .topnav a:hover {
   background-color: #ddd;
   color: var(--main-color);
   border-radius: 8px 0px 8px 0px;
-} */
+} 
 
 /* Add an active class to highlight the current page */
-/* .topnav a.active {
+ .topnav a.active {
   background-color: var(--main-color);
   color: white;
-} */
+} 
 
 /* Hide the link that should open and close the topnav on small screens */
-/* .topnav .icon {
+ .topnav .icon {
   display: none;
-} */
+} 
 
 
 
-/* 
+
 
 
 
@@ -3680,13 +3681,13 @@ font-size: 6px;
   .home-content p {
     font-family: 'poppins',sans-serif;
     font-size: 1rem;
-    display: -webkit-box; */
-    /* -webkit-line-clamp: 4; Adjust the number of lines as needed */
-    /* -webkit-box-orient: vertical; */
-    /* overflow: hidden; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 4; /*Adjust the number of lines as needed*/
+     -webkit-box-orient: vertical; 
+     overflow: hidden; 
     text-overflow: ellipsis;
-   limit number of words 👍👍*/
-    /* width:90%;
+   /* limit number of words 👍👍 */
+       width:90%;
   }
   .home-content span {
     font-size: 1em;
@@ -3751,8 +3752,8 @@ font-size: 6px;
   }
   .p .bx {
    font-size: 0.4rem;
-  } */
-/*  
+  } 
+ 
 
   .home-sci a i{
     padding: 0px;
@@ -3797,16 +3798,16 @@ font-size: 6px;
 }
 
 
-Target the icon element   i|bx
+/* Target the icon element   i|bx */
 .projects-container .slot-container .projects-box  .bx {
-  Adjust properties as needed
-  font-size: 3em;  Example: Set the font size (adjust as needed)
+  /* Adjust properties as needed */
+  font-size: 3em; /* Example: Set the font size (adjust as needed)*/
   margin-top: -2px;
 }
 
 
 
-img/
+/* img/ */
 .projects-container .slot-container .projects-box img {
   width: 80%;
   height: 120px;
@@ -3816,7 +3817,7 @@ img/
 
 
 
-vdeo
+/* vdeo */
 .projects-container .slot-container .projects-box  video  {
   width: 80%;
   height: 100px;
@@ -3826,13 +3827,13 @@ vdeo
 
 
 .projects-container .slot-container .projects-box p  {
-    limit number of words 👍👍👉
+    /* limit number of words 👍👍👉 */
     display: -webkit-box;
-    -webkit-line-clamp: 1; Limits to one line
+    -webkit-line-clamp: 1; /*Limits to one line*/
     -webkit-box-orient: vertical;
-    overflow: hidden; Ensures content is clipped
-    text-overflow: ellipsis; Adds the "..." if the text overflows
-    white-space: nowrap; Prevents text from wrapping to the next line
+    overflow: hidden; /* Ensures content is clipped*/
+    text-overflow: ellipsis; /*Adds the "..." if the text overflows*/
+    white-space: nowrap; /*Prevents text from wrapping to the next line*/
   font-size: 10px;
   padding: 10px;
   margin-bottom: 7px;
@@ -3849,10 +3850,10 @@ vdeo
 .projects-container .slot-container .projects-box a {
   font-size: 12px;
   letter-spacing: 0px;
-} */
+} 
 
 
-/* read-more 
+ /* read-more  */
 .read_more-container {
   font-family: 'Courier New', Courier, monospace;
 
@@ -3871,13 +3872,13 @@ width: max-content;
 text-shadow: none;
 background: #000;
 color: #fff;
-limit
+/* limit */
 display: -webkit-box;
--webkit-line-clamp: 1; Adjust the number of lines as needed
+-webkit-line-clamp: 1; /*Adjust the number of lines as needed*/
 -webkit-box-orient: vertical;
 overflow: hidden;
 text-overflow: ellipsis;
-limit number of words 👍👍
+/* limit number of words 👍👍 */
 font-family: 'poppins', sans-serif;
 font-weight:600;
 }
@@ -3911,7 +3912,7 @@ margin: 5px 5px;
 overflow: hidden;
 height: fit-content;
 display: -webkit-box;
--webkit-line-clamp: 8; Adjust the number of lines as needed
+-webkit-line-clamp: 8; /*Adjust the number of lines as needed*/
 -webkit-box-orient: vertical;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -3920,7 +3921,7 @@ word-break: break-all;
 
 
 /* qn */
-/* .read_more-container .read_more-box .img-box span mark {
+.read_more-container .read_more-box .img-box span mark {
   
 }
 
@@ -3931,11 +3932,11 @@ padding: 5px 5px;
 font-size: 8px;
 font-weight: 600;
 overflow: hidden;
-} */
+}
 /* end of qn */
 
 /* ans */
-/* .read_more-container .read_more-box .img-box span mark {
+.read_more-container .read_more-box .img-box span mark {
   
 }
 
@@ -3951,16 +3952,15 @@ font-family:monospace;
 .read_more-container .read_more-box .img-box span a  {
 padding: 5px 5px;
 font-size: 6px;
-} */
+}
 /* end of ans */
 /* end of read-more */
 
 
 
 
-/* 
- start of games 
 
+ /* start of games  */
 .games-container  {
   overflow: hidden;
   font-family: 'Courier New', Courier, monospace;
@@ -4031,7 +4031,7 @@ font-size: 6px;
 .games-container .card-container .gamecard .batton:hover{
  width: 100%;
  border-radius: 10px;
-} */
+} 
 
 
 /* END OF games */
@@ -4045,9 +4045,6 @@ font-size: 6px;
 /* START OF SOFTWARES */
 
 /* Target the heading element within the section */
-
-
-/*   
 
 .softwares-container  {
   overflow: hidden;
@@ -4124,7 +4121,7 @@ font-size: 6px;
  width: 100%;
  border-radius: 10px;
 }
- */
+ 
 
 /* END OF SOFTWARES */
 
@@ -4132,12 +4129,12 @@ font-size: 6px;
 
 
 /* submit btn */
-/* .btn-box {
+.btn-box {
   justify-self: center;
   
   font-size: 10px;
   width: fit-content;
-} */
+} 
 
 /*end of submit btn */
 
@@ -4147,7 +4144,7 @@ font-size: 6px;
   /* ... (rest of your styles) */
 
 
-/* } */
+ }
 /* END OF 768PX */
 
 
@@ -4156,8 +4153,7 @@ font-size: 6px;
 
 
 /* START OF 992PX */
-
-@media screen and (max-width: 992px) {
+  @media screen and (min-width: 769px) and (max-width: 992px) {
 
   
   .header {
@@ -4816,6 +4812,17 @@ align-items: center;
 
 }
 /* END OF 992PX */
+
+
+
+/* START OF 993  LARGER SCREENS */
+
+/* Styles for screens larger than 992px (Large desktops) */
+@media screen and (min-width: 993px) {
+  /*  */
+
+}
+/* END OF 993  LARGER SCREENS */
 
 
 
