@@ -2956,10 +2956,12 @@ justify-content: space-evenly;
 
   .home-content h1 {
     font-size: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 
   .home-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .home-content .text-animate {
@@ -3192,7 +3194,7 @@ font-weight:600;
 border:orange 1px solid;
 width:90%;
 height: 400px;
-overflow: scroll;
+overflow:scroll;
 margin-bottom: 20px;
 padding-top: 5rem;
 }
@@ -3210,19 +3212,44 @@ box-shadow: 3px 9px orange;
 
 .read_more-container .read_more-box .img-box article {
 position: relative;
-/* border: #cb0b0b 1px solid; */
+border: #cb0b0b 1px solid;
 border-radius: 10px;
-margin: 5px 5px;
-overflow: hidden;
-height: fit-content;
+margin-top: 20rem;
+/* margin: 5px 5px; */
+overflow:hidden;
+/* height: fit-content; */
 display: -webkit-box;
 -webkit-line-clamp: 8; /* Adjust the number of lines as needed */
 -webkit-box-orient: vertical;
-overflow: hidden;
+/* overflow: hidden; */
 text-overflow: ellipsis;
 word-break: break-all;
 }
 
+/* START OF SCROLLABLE ARTICLE */
+/* Style for the article's scrollbar */
+.read_more-container .read_more-box .img-box article::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style for the scrollbar track */
+.read_more-container .read_more-box .img-box article::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px;
+}
+
+/* Style for the scrollbar thumb */
+.read_more-container .read_more-box .img-box article::-webkit-scrollbar-thumb {
+  background-color: #888; /* Dark gray color for the thumb */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* Add a border to create a gap */
+}
+
+/* Hover state for the thumb */
+.read_more-container .read_more-box .img-box article::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change color on hover */
+}
+/* END OF SCROLLABLE ARTICLE */
 
 /* qn */
 .read_more-container .read_more-box .img-box span mark {
