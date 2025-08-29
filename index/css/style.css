@@ -2854,19 +2854,33 @@ justify-content: space-evenly;
   
 
 
+  
   .viewers {
-    font-size: .5rem;
-    margin-top: 2rem;
+    padding: 5px 5px;
+   background: skyblue;
+   border-radius: 0px 8px;
   }
   
   
   .viewers i {
-    font-size: 7px;
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    border-radius: 0px 8px;
+    
   }
   
   .viewers p {
-    font-size: 5px;
+    font-size: 10px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: red;
+    border: groove;
+    /* width: fit-content;
+    height: fit-content; */
   }
+  
   
 
 
@@ -3539,28 +3553,37 @@ font-size: 12px;
 
 
   .viewers {
-    font-size: .5rem;
-    margin-top: 2rem;
+    font-size: 2rem;
+   background: rgb(178, 203, 212);
   }
   
   
   .viewers i {
-    font-size: 7px;
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
   }
   
   .viewers p {
-    font-size: 5px;
+    font-size: 10px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: red;
+    border: groove;
+    /* width: fit-content;
+    height: fit-content; */
   }
   
-
 
   
   .email-chat-container h4 {
     display: flex;
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 1px 2px #000;
-    width: 20rem;
+    width: fit-content;
     margin-bottom: 30px;
+    background: yellow;
   }
 
   .email-chat-container {
@@ -3572,14 +3595,15 @@ font-size: 12px;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 200px;
+    height: fit-content;
+    width: fit-content;
    
   }
   
 
   .email-chat-box a {
-    font-size: 1em;
+    font-size: 16px;
+    background: blue;
   }
 
 
@@ -3589,13 +3613,12 @@ font-size: 12px;
 /* ===== Base Styles ===== */
 /* Add a black background color to the top navigation */
  .topnav {
-  
+  margin-left: 10px;
 } 
 
 /* Style the links inside the navigation bar */
  .topnav a {
- 
-  font-size: 1.5em;
+  font-size: 12px;
   
 } 
 
@@ -3990,29 +4013,29 @@ font-size: 12px;
 
 
 .games-container h2 {
-  width: fit-content;
-  font-size: 10px;
-  padding: 2px 1px;
-  
-  justify-content: center;
- align-items: center; 
+  font-size: 2rem;
+  display: flex;
  }
      
 
 
 
 .games-container h2 span  {
-  margin-left: 5px;
-  font-size: 18px;
+  left: 4px;
+  width: fit-content;
+  font-size: 1.5rem;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .games-container .buttons{
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .games-container button{
- font-size: 10px;
+ font-size: 16px;
   padding: 3px 3px;
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
@@ -4073,32 +4096,31 @@ font-size: 12px;
 
 
 
-
 .softwares-container h2 {
-  width: fit-content;
-  font-size: 10px;
-  padding: 2px 1px;
- 
-  justify-content: center;
- align-items: center; 
+  font-size: 2rem;
+  display: flex;
  }
      
 
 
 
 .softwares-container h2 span  {
-
- margin-left: 5px;
-  font-size: 18px;
+  left: 4px;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
 .softwares-container .buttons{
- 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .softwares-container button{
- font-size: 10px;
+  font-size: 16px;
   padding: 3px 3px;
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
@@ -4177,10 +4199,10 @@ font-size: 12px;
     margin: 8px 12px;
     background: grey;
     padding: 1em;
-    color: #fff;
+    /* color: #fff; */
     height: 60px;
     width: 94%;
-    border: dotted greenyellow;
+    color: dotted greenyellow;
     border-radius: 0px 10px;
     /* border: 1px red solid; */
     justify-content: space-evenly;
@@ -4203,17 +4225,26 @@ font-size: 12px;
 
 
   .viewers {
-    font-size: .5rem;
-    margin-top: 2rem;
+    font-size: 2rem;
+   background: skyblue;
   }
   
   
   .viewers i {
-    font-size: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
   }
   
   .viewers p {
-    font-size: 5px;
+    font-size: 10px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: red;
+    border: groove;
+    /* width: fit-content;
+    height: fit-content; */
   }
   
 
@@ -4221,10 +4252,12 @@ font-size: 12px;
   
   .email-chat-container h4 {
     display: flex;
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 1px 2px #000;
-    width: 20rem;
+    width: fit-content;
     margin-bottom: 30px;
+    background: red;
+    border: groove;
   }
 
   .email-chat-container {
@@ -4236,14 +4269,16 @@ font-size: 12px;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 200px;
+    height: fit-content;
+    width: fit-content;
+  
    
   }
   
 
   .email-chat-box a {
-    font-size: 1.5em;
+    font-size: 20px;
+    color: yellow;
   }
 
 
