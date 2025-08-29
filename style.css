@@ -2955,7 +2955,11 @@ justify-content: space-evenly;
  }
 
   .home-content h1 {
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
   }
 
   .home-content .text-animate {
@@ -3052,7 +3056,7 @@ justify-content: space-evenly;
  
 
   .home-sci a i{
-    padding: 0px;
+    padding-top: 9px;
     font-size: 2em;
     justify-content: center;
     align-items: center;
