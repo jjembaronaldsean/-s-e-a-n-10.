@@ -3580,7 +3580,8 @@ justify-content: space-evenly;
  }
 
  .products-preview .preview{
-    top: 8em;
+    top: 10em;
+    bottom: 10em;
 }
 
  .products-preview.active{
