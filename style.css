@@ -3580,7 +3580,7 @@ justify-content: space-evenly;
  }
 
  .products-preview .preview{
-    /* top: 20em; */
+    top: 6em;
 }
 
  .products-preview.active{
@@ -3688,8 +3688,8 @@ background: #000;
  
 .full-image {
    margin-top: 3em;
-  width: 540px;
-  height: 350px;
+  width: 320px;
+  height: 200px;
 }
 
 .full-image.loaded {
