@@ -3581,7 +3581,7 @@ justify-content: space-evenly;
 
  .products-preview .preview{
     top: 10em;
-    bottom: 10em;
+    margin-bottom: 10em;
 }
 
  .products-preview.active{
