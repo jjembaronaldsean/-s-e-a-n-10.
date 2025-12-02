@@ -3580,8 +3580,9 @@ justify-content: space-evenly;
  }
 
  .products-preview .preview{
-    top: 10em;
-    margin-bottom: 10em;
+    top: 13em;
+    margin-bottom: 13em;
+    padding: 10px 10px;
 }
 
  .products-preview.active{
