@@ -1255,7 +1255,7 @@ font-weight: bolder;
   position: fixed;
   top: 0;
   /* left: 0; */
-  height: 99vh;
+  height: 100vh;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   background: rgb(0, 0, 0 ,.8);
@@ -3577,11 +3577,13 @@ justify-content: space-evenly;
 
  /* start of projects-preview */
  .products-preview{
-  background: #000;
-  overflow-y: scroll;
+ background: #000; 
+        overflow-y: scroll;
+        padding-bottom: 8em;
  }
 
  .products-preview .preview{
+  height: 95vh;
             top: 20em;
         margin-bottom: 13em;
     padding: 10px 10px;
