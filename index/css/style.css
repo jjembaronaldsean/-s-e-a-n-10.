@@ -1255,7 +1255,7 @@ font-weight: bolder;
   position: fixed;
   top: 0;
   /* left: 0; */
-  height: 100vh;
+  height: 99vh;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   background: rgb(0, 0, 0 ,.8);
