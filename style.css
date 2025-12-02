@@ -3579,7 +3579,7 @@ justify-content: space-evenly;
  .products-preview{
  background: #000; 
         overflow-y: scroll;
-        padding-bottom: 8em;
+        padding-bottom: 12em;
  }
 
  .products-preview .preview{
