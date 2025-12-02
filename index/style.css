@@ -1527,7 +1527,7 @@ font-weight: bolder;
  .products-preview .preview .fa-times{
   position: absolute;
   top: .3rem;
-  left: 2rem;
+  right: 2rem;
   font-size: 28px;
   color: #777;
   cursor: pointer;
@@ -3578,12 +3578,19 @@ justify-content: space-evenly;
  /* start of projects-preview */
  .products-preview{
   background: #000;
+  overflow-y: scroll;
  }
 
  .products-preview .preview{
             top: 20em;
         margin-bottom: 13em;
     padding: 10px 10px;
+    /* start of sean glass */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* end of sean glass *
 }
 
  .products-preview.active{
@@ -3737,12 +3744,15 @@ background: #000;
  } */
 
  .products-preview .preview .fa-times{
-             padding: 2px 2px;
+    display: flex;
+        left: 2rem;
+        /* padding: 2px 2px; */
         font-size: 3rem;
-        background-color: #000;
+        /* background-color: #000; */
         border-radius: 50%;
         padding: 5px;
  }
+
 
  .products-preview .preview .fa-times:hover{
  /*  */
